@@ -47,7 +47,7 @@ urlpatterns = [
     path('toMulVAL/',toMulVAL,name="toMulVAL"),
     path('ToMulVAL/tomulvalupload/',tomulvalupload),
     path('ToMulVAL/tomulvaldownload/',tomulvaldownload),
-    path('/ToMulVAL/tomulvalerror1/',tomulvalerror1),
+    path('ToMulVAL/tomulvalerror1/',tomulvalerror1),
     url(r'^static/(?P<path>.*)$', static.serve, {'document_root': settings.STATIC_ROOT}, name='static'),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': settings.MEDIA_ROOT}, name='media'),
     url(r'^favicon\.ico$',RedirectView.as_view(url=r'static/images/favicon.ico')),

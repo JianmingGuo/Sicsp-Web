@@ -9,8 +9,8 @@ def toMulVAL(req):
     return render(req, "toMulVAL.html")
 
 def tomulvalupload(req):
-    shutil.rmtree('./ToMulVAL/upload')
-    os.mkdir('./ToMulVAL/upload')
+    # shutil.rmtree('./ToMulVAL/upload')
+    # os.mkdir('./ToMulVAL/upload')
     # print("data: ", req.POST)
     # print("file:", req.FILES)
     if req.method == "POST":
