@@ -10,12 +10,11 @@ def toMulVAL(req):
 
 def tomulvalupload(req):
     shutil.rmtree('./ToMulVAL/upload')
-    # os.mkdir('/root/ICS/mulval/testcases/ns/')
+    os.mkdir('./ToMulVAL/upload')
     print("data: ", req.POST)
     print("file:", req.FILES)
     if req.method == "POST":
         file = req.FILES.get("upload", None)
-        file.SaveAs()
         if not file:
             return render(req, "ToMulVAL.html", {"errinf":"No files for upload!"})
         f = open("./ToMulVAL/upload/test.nessus", 'wb')
@@ -24,8 +23,9 @@ def tomulvalupload(req):
         f.close()
     path = "./ToMulVAL/upload/test.nessus"
     nessus(path)
+    return render(req, "toMulVAL.html")
 
-def tomulcaldownload(request):
+def tomulvaldownload(request):
     file=open('./ToMulval/download/nessus.p','rb')
     response=HttpResponse(file)
     response['Content-Type'] = 'application/octet-stream'

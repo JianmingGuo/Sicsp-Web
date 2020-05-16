@@ -34,14 +34,14 @@ toMulVAL
 
 <body> <!--style="background-image: url({% static '/imgs/S-ICS.png' %});background-size: auto 700px;background-position: 0px 0px;background-repeat:no-repeat;background-attachment:fixed;">-->
     <h1 style="background: wheat;color: #000000;padding: 40px 0;margin-bottom: 120px;">toMulVAL</h1>
-    <form action="/ToMulVAL/ToMulVAL/" method="post" enctype="multipart/form-data">
+    <form action="/ToMulVAL/tomulvalupload/" method="post" enctype="multipart/form-data">
         <center>Please upload a origin file<input type="file" name="upload"/></center>
         <input type="submit" value="ToMulVAL"/>
     </form>
     <small style="color: red">{{ errinf }}</small>
     <br>
     <div>
-        <form action="/ToMulVAL/download/" method="post">
+        <form action="/ToMulVAL/tomulvaldownload/" method="post">
             <input type="submit" value="Download the .p file">
         </form>
     </div>
