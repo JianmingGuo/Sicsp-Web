@@ -37,10 +37,10 @@ def tomulvalerror1(req):
 
 
 def tomulvaldownload(request):
-    file=open('./ToMulVAL/download/nessus.p','rb')
+    file=open('./ToMulVAL/download/nessus.P','rb')
     response=HttpResponse(file)
     response['Content-Type'] = 'application/octet-stream'
-    response['Content-Disposition'] = 'attachment; filename="nessus.p"'
+    response['Content-Disposition'] = 'attachment; filename="nessus.P"'
     return response
 
 
