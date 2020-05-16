@@ -44,6 +44,8 @@ def nessus(path):
     cmd = 'cp %s %s' % (res_path, down_path)
     os.system(cmd)
 
+    return  0
+
 
 def get_config(dir_path):
     fullpath = dir_path + '/config' + '.txt'
