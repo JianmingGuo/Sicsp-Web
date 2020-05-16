@@ -16,7 +16,7 @@ import os
 from django.contrib.staticfiles.management.commands import collectstatic
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+# FILES_DIR = os.path.abspath(os.path.join(BASE_DIR, '/root/ICS/mulval/testcases/'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'MulVAL2B',
     'Grass',
     'blog',
+    'ToMulVAL',
     'ckeditor',
     'ckeditor_uploader',
 ]
