@@ -36,14 +36,16 @@ def nessus(path):
     print(cmd)
     os.system(cmd)
 
-    # os.chdir(./../../..)
-    print(os.getcwd())
+    
 
     res_path = 'nessus.P'
     down_path = '../../download/'
     cmd = 'cp %s %s' % (res_path, down_path)
     os.system(cmd)
-
+    
+    os.chdir('./../../..')
+    print(os.getcwd())
+    
     return  0
 
 
