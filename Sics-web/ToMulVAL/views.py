@@ -20,12 +20,14 @@ def tomulvalupload(req):
         if not file:
             return render(req, "ToMulVAL.html", {"errinf":"No files for upload!"})
         # f = open("./ToMulVAL/upload/test.nessus", 'wb')
-        f = open(os.path.join("./ToMulVAL/upload",file.name), 'wb')
+        # print("sadasd",file)
+        # f = open("./ToMulVAL/upload/"+file.name, 'wb+')
+        f = open(os.path.join("./ToMulVAL/upload",file.name), 'wb+')
         for line in file.chunks():  # 分块写入
             f.write(line)
         f.close()
     path = os.path.join("./ToMulVAL/upload",file.name)
-    nessus(path)
+    # nessus(path)
     # return render(req,"toMulVAL.html")
     return redirect('/ToMulVAL/tomulvalerror1/')
 
