@@ -3,7 +3,9 @@ import shutil
 from nessus import nessus,get_config
 from django.shortcuts import HttpResponse
 import os
-
+import ToMulVAL.editable_table.utils.DBO as DB
+import ToMulVAL.editable_table.utils.ToMulval as TM
+from django.http import JsonResponse
 
 def toMulVAL(req):
     return render(req, "toMulVAL.html")
@@ -33,8 +35,42 @@ def tomulvalerror1(req):
 
 
 def tomulvaldownload(request):
-    file=open('./ToMulval/download/nessus.p','rb')
+    file=open('./ToMulVAL/download/nessus.p','rb')
     response=HttpResponse(file)
     response['Content-Type'] = 'application/octet-stream'
     response['Content-Disposition'] = 'attachment; filename="nessus.p"'
+    return response
+
+
+
+def GetData(request):
+    dbo = DB.DBO()
+    dic = dbo.RetTabEle()
+    response = JsonResponse(dic)
+    return response
+
+def PostData(request):
+    dbo = DB.DBO()
+    if request.is_ajax():
+        dic = request.POST
+    v1 = dic["table"]
+    # print(v1)
+    v2 = v1.split("\n")
+    for i in range(len(v2)):
+        v2[i] = v2[i].split(";")
+        for j in range(len(v2[i])):
+            # v2[i][j] = v2[i][j].replace(" ","")
+            v2[i][j] = v2[i][j].strip()
+    # print(v2)
+    v2 = v2[:-1]
+    dbo.Infoupdate(v2)
+    dbo.CVEupdate(v2)
+    dbo.close()
+    response = JsonResponse({"hello":"hi"})
+    return response
+
+def GenMulval(request):
+    tom = TM.ToM()
+    tom.GenM(tom.Gettup())
+    response = JsonResponse({"hello": "hi"})
     return response

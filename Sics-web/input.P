@@ -1,0 +1,135 @@
+attackerLocated(internet).
+attackGoal(execCode(station1, _)).
+attackGoal(execCode(station2, _)).
+attackGoal(execCode(station3, _)).
+attackGoal(execCode(station4, _)).
+attackGoal(execCode(station5, _)).
+attackGoal(execCode(station6, _)).
+attackGoal(execCode(station7, _)).
+attackGoal(execCode(station8, _)).
+attackGoal(execCode(station9, _)).
+attackGoal(execCode(station10, _)).
+attackGoal(execCode(station11, _)).
+attackGoal(execCode(station12, _)).
+attackGoal(execCode(station13, _)).
+attackGoal(execCode(station14, _)).
+attackGoal(execCode(station15, _)).
+attackGoal(execCode(station16, _)).
+attackGoal(execCode(station17, _)).
+attackGoal(execCode(station18, _)).
+attackGoal(execCode(station19, _)).
+attackGoal(execCode(station20, _)).
+attackGoal(execCode(station21, _)).
+attackGoal(execCode(station22, _)).
+attackGoal(execCode(station23, _)).
+attackGoal(execCode(station24, _)).
+attackGoal(execCode(station25, _)).
+attackGoal(execCode(station26, _)).
+attackGoal(execCode(station27, _)).
+attackGoal(execCode(station28, _)).
+attackGoal(execCode(station29, _)).
+attackGoal(execCode(station30, _)).
+attackGoal(execCode(station31, _)).
+attackGoal(execCode(station32, _)).
+attackGoal(execCode(station33, _)).
+attackGoal(execCode(station34, _)).
+attackGoal(execCode(station35, _)).
+attackGoal(execCode(station36, _)).
+attackGoal(execCode(station37, _)).
+attackGoal(execCode(station38, _)).
+attackGoal(execCode(station39, _)).
+attackGoal(execCode(station40, _)).
+attackGoal(execCode(station41, _)).
+attackGoal(execCode(station42, _)).
+attackGoal(execCode(station43, _)).
+attackGoal(execCode(station44, _)).
+attackGoal(execCode(station45, _)).
+attackGoal(execCode(station46, _)).
+attackGoal(execCode(station47, _)).
+attackGoal(execCode(station48, _)).
+attackGoal(execCode(station49, _)).
+attackGoal(execCode(station50, _)).
+attackGoal(execCode(station51, _)).
+hacl(internet, station38, tcp, 80).
+networkServiceInfo(station38, _, tcp, 80, _).
+hacl(internet, station41, tcp, 80).
+networkServiceInfo(station41, _, tcp, 80, _).
+hacl(internet, station45, tcp, 80).
+networkServiceInfo(station45, _, tcp, 80, _).
+hacl(internet, station51, tcp, 80).
+networkServiceInfo(station51, _, tcp, 80, _).
+hacl(station6, station38, tcp, 80).
+hacl(station6, station38, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station4, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station38, station6, tcp, 80).
+hacl(station39, station38, tcp, 80).
+hacl(station6, station38, tcp, 80).
+hacl(station6, station38, tcp, 80).
+hacl(station6, station38, tcp, 80).
+hacl(station6, station38, tcp, 80).
+vulExists(station39, 'CVE-2019-19095', _).
+vulProperty('CVE-2019-19095', remoteExploit, privEscalation).
+vulExists(station39, 'CVE-2019-19090', _).
+vulProperty('CVE-2019-19090', remoteExploit, privEscalation).
+vulExists(station39, 'CVE-2019-19089', _).
+vulProperty('CVE-2019-19089', remoteExploit, privEscalation).
+vulExists(station39, 'CVE-2019-19003', _).
+vulProperty('CVE-2019-19003', remoteExploit, privEscalation).
+vulExists(station39, 'CVE-2019-19002', _).
+vulProperty('CVE-2019-19002', remoteExploit, privEscalation).
+vulExists(station39, 'CVE-2019-19001', _).
+vulProperty('CVE-2019-19001', remoteExploit, privEscalation).
+networkServiceInfo(station39, mountd, rpc, _, _).
+nfsExportInfo(station39, '/export', write, station7).
+nfsExportInfo(station39, '/export', write, station34).
+nfsExportInfo(station39, '/export', write, station23).
+localFileProtection(station39, root, _, _).
+nfsMounted(station6, '/usr/local/share', station39, '/export', read).
+nfsMounted(station9, '/usr/local/share', station39, '/export', read).
+nfsMounted(station5, '/usr/local/share', station39, '/export', read).
+nfsMounted(station11, '/usr/local/share', station39, '/export', read).

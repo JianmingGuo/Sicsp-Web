@@ -18,7 +18,7 @@ from django.urls import path, include, re_path
 from MulVAL2B.views import window, mulval, download, a2b, mulvalerror1, mulvalerror2, mulvalsuccess, a2berror
 from blog.views import blog_detail, like_change, blog_list, toHome, contactsuccess, contactme, contactfail
 from Grass.views import grass_main
-from ToMulVAL.views import toMulVAL,tomulvalupload,tomulvaldownload,tomulvalerror1
+from ToMulVAL.views import toMulVAL,tomulvalupload,tomulvaldownload,tomulvalerror1,GetData,GenMulval,PostData
 from django.views import static
 from django.conf import settings
 from django.conf.urls import url
@@ -52,5 +52,8 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': settings.MEDIA_ROOT}, name='media'),
     url(r'^favicon\.ico$',RedirectView.as_view(url=r'static/images/favicon.ico')),
     url(r'^banner\.jpg$',RedirectView.as_view(url=r'static/images/banner.jpg')),
+    url(r'^GetData$', GetData),
+    url(r'^PostData$', PostData),
+    url(r'^GenMulval$', GenMulval),
     # url(r'^总流程详图(深色)\.png$',RedirectView.as_view(url=r'/static/images/totalprocess.png'))
 ]

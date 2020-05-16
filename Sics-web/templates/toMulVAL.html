@@ -11,6 +11,7 @@ toMulVAL
 <head>
     <meta charset="UTF-8">
     <title>toMulVAL</title>
+
 </head>
 
 <body>
@@ -50,4 +51,52 @@ toMulVAL
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 </body>
 
+
+<body onload="setToEditable('editable')">
+    <link rel="stylesheet" type="text/css" href="/static/css/editable.css"
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script language="javascript" src={% static "editable.js" %} type="text/javascript"></script>
+	<script type="text/javascript">
+		function setToEditable(tableid){
+			document.getElementById(tableid).onclick=editCell;
+		}
+	</script>
+	<div style="height:40px;"></div>
+	<center>
+	<table border="1" id="editable" class="stats">
+		<tr bgcolor="#666666">
+			<th nowrap="nowrap">IP</th>
+			<th nowrap="nowrap">主机名</th>
+			<th nowrap="nowrap">网络/文件服务器</th>
+			<th nowrap="nowrap">读关系</th>
+			<th nowrap="nowrap">写关系</th>
+			<th nowrap="nowrap">设别型号</th>
+		</tr>
+	</table>
+    <div style="height:40px;"></div>
+    <button type="button" id="upload" onclick="update('editable')">提交</button>
+    <button type="button" id="mulval" onclick="mulval('editable')">生成攻击图</button>
+	</center>
+<script>
+$.ajax({
+    url: "/GetData",
+    type: "post",
+    data: "hello",
+    contentType: false,
+    processData: false,
+    success: function (data) {
+        var length= Object.keys(data).length;
+        var i = 1;
+        for (var key in data) {
+            insRow("editable",i,key,data);
+            i++;
+        }
+    },
+    error: function (data) {
+        alert("拉取信息失败！");
+        console.log(data)
+    }
+})
+</script>
+</body>
 {% endblock %}
