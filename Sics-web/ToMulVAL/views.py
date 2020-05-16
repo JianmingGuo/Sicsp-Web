@@ -27,7 +27,7 @@ def tomulvalupload(req):
             f.write(line)
         f.close()
     path = os.path.join("./ToMulVAL/upload",file.name)
-    # nessus(path)
+    nessus(path)
     # return render(req,"toMulVAL.html")
     return redirect('/ToMulVAL/tomulvalerror1/')
 
