@@ -22,57 +22,8 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3003">
-              <caret line="928" column="54" lean-forward="true" selection-start-line="928" selection-start-column="54" selection-end-line="928" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="安全评估系统与ICS的交互图.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/images/安全评估系统与ICS的交互图.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="loader.gif" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/images/loader.gif">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="favicon.ico" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/images/favicon.ico">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="GrassMarlin.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/images/GrassMarlin.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="banner.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/images/banner.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="总流程详图.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/images/总流程详图.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="结构概图.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/images/结构概图.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="总流程详图(深色).png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/images/总流程详图(深色).png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/collectstatic/home/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="236" column="4" lean-forward="true" selection-start-line="236" selection-start-column="4" selection-end-line="236" selection-end-column="66" />
+            <state relative-caret-position="163">
+              <caret line="439" column="74" lean-forward="true" selection-start-line="439" selection-start-column="74" selection-end-line="439" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -118,6 +69,7 @@
       <find>0.7</find>
       <find>项目功能</find>
       <find>项目亮点</find>
+      <find>0.1</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -129,7 +81,6 @@
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/static/css/icomoon.css" />
-        <option value="$PROJECT_DIR$/collectstatic/home/css/style.css" />
         <option value="$PROJECT_DIR$/templates/grass.html" />
         <option value="$PROJECT_DIR$/ToMulVAL/src/aliyun.py" />
         <option value="$PROJECT_DIR$/Sics/settings.py" />
@@ -144,6 +95,7 @@
         <option value="$PROJECT_DIR$/static/home/js/template.js" />
         <option value="$PROJECT_DIR$/collectstatic/home/js/template.js" />
         <option value="$PROJECT_DIR$/static/home/css/style.css" />
+        <option value="$PROJECT_DIR$/collectstatic/home/css/style.css" />
         <option value="$PROJECT_DIR$/templates/home.html" />
       </list>
     </option>
@@ -167,58 +119,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Sics-web的副本" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sics-web的副本" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sics-web的副本" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sics-web的副本" type="462c0819:PsiDirectoryNode" />
-              <item name="collectstatic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sics-web的副本" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sics-web的副本" type="462c0819:PsiDirectoryNode" />
-              <item name="collectstatic" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sics-web的副本" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sics-web的副本" type="462c0819:PsiDirectoryNode" />
-              <item name="collectstatic" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sics-web的副本" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sics-web的副本" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sics-web的副本" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sics-web的副本" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sics-web的副本" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sics-web的副本" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sics-web的副本" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sics-web的副本" type="462c0819:PsiDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="Sics-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sics-web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -396,10 +308,9 @@
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32900944" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.40607736" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32596686" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17986111" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17986111" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32872927" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -411,30 +322,31 @@
       <window_info anchor="bottom" id="manage.py@Sics-web" order="12" weight="0.3864266" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32872927" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17986111" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.4088398" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32872927" />
       <window_info anchor="bottom" id="manage.py@Sics-web" order="12" weight="0.3864266" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32900944" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32596686" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32872927" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32900944" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,6 +361,20 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13920">
+          <caret line="928" column="47" lean-forward="true" selection-start-line="928" selection-start-column="47" selection-end-line="928" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collectstatic/home/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3540">
+          <caret line="236" column="4" lean-forward="true" selection-start-line="236" selection-start-column="4" selection-end-line="236" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/collectstatic/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-29" />
@@ -654,34 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/home/images/banner.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/collectstatic/images/banner.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/collectstatic/home/images/banner.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/home/images/bg-image-2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/home/images/bg-image-1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/collectstatic/home/images/bg-image-3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/collectstatic/home/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="236" column="4" lean-forward="true" selection-start-line="236" selection-start-column="4" selection-end-line="236" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/home/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -689,34 +587,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/总流程详图.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/结构概图.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/总流程详图(深色).png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/loader.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/favicon.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/GrassMarlin.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/banner.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/images/安全评估系统与ICS的交互图.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/collectstatic/home/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="119" column="39" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3003">
-          <caret line="928" column="54" lean-forward="true" selection-start-line="928" selection-start-column="54" selection-end-line="928" selection-end-column="54" />
+        <state relative-caret-position="163">
+          <caret line="439" column="74" lean-forward="true" selection-start-line="439" selection-start-column="74" selection-end-line="439" selection-end-column="74" />
         </state>
       </provider>
     </entry>
