@@ -12,7 +12,7 @@
 	$(document).ready(function(){
 	
 		// $(".banner-image").backstretch('images/banner.jpg')
-		$(".banner-image").backstretch('images/totalprocess.png');
+		$(".banner-image").backstretch('/static/images/总流程详图.png');
 
 		// $(".banner-image").backstretch('/static/home/images/totalprocess.png');
 
