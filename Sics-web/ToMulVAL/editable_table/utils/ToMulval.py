@@ -1,15 +1,16 @@
 import pymysql
 import ToMulVAL.editable_table.utils.DBO as DB
-device = "cza_device"
-edges = "cza_edges"
 
 class ToM:
     #连接数据库操作
-    def __init__(self):
-        self.dbo = DB.DBO()
+    def __init__(self,tpname):
+        self.dbo = DB.DBO(tpname)
+        self.tp = tpname
+        self.device = self.tp + "_device"
+        self.edges = self.tp + "_edges"
 
     def Gettup(self):
-        sql = "select * from "+edges+";"
+        sql = "select * from "+self.edges+";"
         rs = self.dbo.GetSItems(sql)
         list = []
         for i1 in rs:
@@ -29,8 +30,8 @@ class ToM:
         target = ["station0", "station5", "station12", "station17"]
         '''
         list = self.dbo.GetAllItems()
-        weblist = self.dbo.GetSItems("select NICKNAME from "+device+" where `NA` = 'Y';")
-        filelist = self.dbo.GetSItems("select NICKNAME,WR,RR from "+device+" where `FS` = 'Y';")
+        weblist = self.dbo.GetSItems("select NICKNAME from "+self.device+" where `NA` = 'Y';")
+        filelist = self.dbo.GetSItems("select NICKNAME,WR,RR from "+self.device+" where `FS` = 'Y';")
         filedic = {}
         for i1 in filelist:
             filedic[i1[0]] = i1[1:3]
@@ -70,7 +71,7 @@ class ToM:
         # vulExists(webServer, 'CAN-2002-0392', httpd).
         # vulProperty('CAN-2002-0392', remoteExploit, privEscalation).
         string = ""
-        tmp = list(self.dbo.GetSItems("select EXPLOIT,TOPO from "+device+" where NICKNAME = '" + name + "'")[0])
+        tmp = list(self.dbo.GetSItems("select EXPLOIT,TOPO from "+self.device+" where NICKNAME = '" + name + "'")[0])
         tmp[0] = tmp[0].split(",")[:-1]
         tmp[1] = tmp[1].split(",")[:-1]
         if(cves != None):

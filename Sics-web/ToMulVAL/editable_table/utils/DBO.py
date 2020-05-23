@@ -1,11 +1,13 @@
 import pymysql
 import ToMulVAL.editable_table.utils.CNVD as CD
-device = "cza_device"
-edges = "cza_edges"
+
 
 class DBO:
 
-    def __init__(self):
+    def __init__(self,tpname):
+        self.tp = tpname
+        self.device = self.tp + "_device"
+        self.edges = self.tp + "_edges"
         self.conn = pymysql.connect(host='39.100.88.210', user='mulval', password='mulval', database='grass', charset='utf8')
         self.cursor = self.conn.cursor()  # 执行完毕返回的结果集默认以元组显示
         self.rs = ()
@@ -13,7 +15,7 @@ class DBO:
         self.ip_name = self.cast()
 
     def GetAllItems(self):
-        sql = "select * from "+device+";"
+        sql = "select * from "+self.device+";"
         self.cursor.execute(sql)  # 执行SQL语句
         self.rs = self.cursor.fetchall()
         return self.rs
@@ -25,12 +27,12 @@ class DBO:
 
     def delete(self,ll):
         for i1 in ll:
-            cmd = "delete from "+device+" where `NICKNAME`='" + i1 + "';"
+            cmd = "delete from "+self.device+" where `NICKNAME`='" + i1 + "';"
             self.cursor.execute(cmd)
             self.conn.commit()
 
     def RetTabEle(self):
-        sql = "select * from "+device+";"
+        sql = "select * from "+self.device+";"
         self.cursor.execute(sql)  # 执行SQL语句
         self.rs = self.cursor.fetchall()
         for i in self.rs:
@@ -44,16 +46,16 @@ class DBO:
             l[2]=l[2].replace("false","N")
             l[2]=l[2].replace("true","Y")
             # if (l[2][0]=='Y'):
-            cmd = "update "+device+" set `NA` = '"+l[2][0]+"' where `NICKNAME` = '"+l[1]+"';"
+            cmd = "update "+self.device+" set `NA` = '"+l[2][0]+"' where `NICKNAME` = '"+l[1]+"';"
             self.cursor.execute(cmd)
             # if (l[2][1]=='Y'):
-            cmd = "update "+device+" set `FS` = '"+l[2][1]+"' where `NICKNAME` = '"+l[1]+"';"
+            cmd = "update "+self.device+" set `FS` = '"+l[2][1]+"' where `NICKNAME` = '"+l[1]+"';"
             self.cursor.execute(cmd)
-            cmd = "update "+device+" set `RR` = '"+l[3]+"' where `NICKNAME` = '" + l[1] + "';"
+            cmd = "update "+self.device+" set `RR` = '"+l[3]+"' where `NICKNAME` = '" + l[1] + "';"
             self.cursor.execute(cmd)
-            cmd = "update "+device+" set `WR` = '"+l[4]+"' where `NICKNAME` = '" + l[1] + "';"
+            cmd = "update "+self.device+" set `WR` = '"+l[4]+"' where `NICKNAME` = '" + l[1] + "';"
             self.cursor.execute(cmd)
-            cmd = "update "+device+" set `MODEL` = '"+l[5]+"' where `NICKNAME` = '" + l[1] + "';"
+            cmd = "update "+self.device+" set `MODEL` = '"+l[5]+"' where `NICKNAME` = '" + l[1] + "';"
             self.cursor.execute(cmd)
             self.conn.commit()
 
@@ -62,7 +64,7 @@ class DBO:
         cve=''
         for l in ll:
             model = l[5]
-            sql = "update "+device+" set `MODEL` = '" + model + "' where `NICKNAME` = '" + l[1] + "';"
+            sql = "update "+self.device+" set `MODEL` = '" + model + "' where `NICKNAME` = '" + l[1] + "';"
             self.cursor.execute(sql)
             self.conn.commit()
             if (model != ''):
@@ -70,15 +72,15 @@ class DBO:
                 if cve != '':
                     tmp = cve.split(",")[:-1]
                     rng_pro = cnvd.Get_Rng_Property(tmp)
-                    self.cursor.execute("update "+device+" set `EXPLOIT` = '" + rng_pro[0] + "' where `NICKNAME` = '" + l[1] + "';")
-                    self.cursor.execute("update "+device+" set `TOPO` = '" + rng_pro[1] + "' where `NICKNAME` = '" + l[1] + "';")
+                    self.cursor.execute("update "+self.device+" set `EXPLOIT` = '" + rng_pro[0] + "' where `NICKNAME` = '" + l[1] + "';")
+                    self.cursor.execute("update "+self.device+" set `TOPO` = '" + rng_pro[1] + "' where `NICKNAME` = '" + l[1] + "';")
             else:
                 self.cursor.execute(
-                    "update "+device+" set `EXPLOIT` = '' where `NICKNAME` = '" + l[1] + "';")
+                    "update "+self.device+" set `EXPLOIT` = '' where `NICKNAME` = '" + l[1] + "';")
                 self.cursor.execute(
-                    "update "+device+" set `TOPO` = '' where `NICKNAME` = '" + l[1] + "';")
+                    "update "+self.device+" set `TOPO` = '' where `NICKNAME` = '" + l[1] + "';")
 
-            sql = "update "+device+" set `CVE` = '" + cve + "' where `NICKNAME` = '" + l[1] + "';"
+            sql = "update "+self.device+" set `CVE` = '" + cve + "' where `NICKNAME` = '" + l[1] + "';"
             self.cursor.execute(sql)
             self.conn.commit()
             cve = ''
@@ -87,12 +89,12 @@ class DBO:
     def cast(self):
         ips = set()
         cast = {}
-        self.cursor.execute("select * from "+edges+";")
+        self.cursor.execute("select * from "+self.edges+";")
         self.rs = self.cursor.fetchall()
         for i1 in self.rs:
             ips.add(i1[0])
             ips.add(i1[1])
-        self.cursor.execute("select IP,NICKNAME,OTHERIP from "+device+";")
+        self.cursor.execute("select IP,NICKNAME,OTHERIP from "+self.device+";")
         self.rs = self.cursor.fetchall()
         for i1 in ips:
             for i2 in self.rs:

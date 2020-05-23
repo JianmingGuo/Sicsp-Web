@@ -14,51 +14,87 @@ BAG-MulVAL
 </head>
 
 <body>
-<link rel="stylesheet" href="/static/live2d/css/live2d.css" />
-<div id="landlord">
-    <div class="message" style="opacity:0"></div>
-    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
-    <div class="hide-button">隐藏</div>
-</div>
 <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script type="text/javascript">
-    var message_Path = '{%static 'live2d/message.json' %}'
-    var home_Path = 'https://mekakuactor.cn/'
-</script>
-<script type="text/javascript" src="/static/live2d/js/live2d.js"></script>
-<script type="text/javascript" src="/static/live2d/js/message.js"></script>
-<script type="text/javascript">
-    loadlive2d("live2d", "{%static 'live2d/model/kesshouban_v2/model.json'%}");
-</script>
 </body>
 
 <body> <!--style="background-image: url({% static '/imgs/S-ICS.png' %});background-size: auto 700px;background-position: 0px 0px;background-repeat:no-repeat;background-attachment:fixed;">-->
-    <h1 style="background: wheat;color: #000000;">BAG-MulVAL</h1>
+    <h1 style="background: wheat;color: #67ace2;background-color: rgba(0,0,0,0.1);height: 130px;padding: 40px 0;margin:0 0 120px 0;">BAG-MulVAL</h1>
 <h3>Search <a href="/blog/home/?searchtext=BAG-MulVAL">"BAG-MulVAL"</a> for usage.</h3>
-    <form action="/mulval/mulval/" method="post" enctype="multipart/form-data">
-        <center>Please upload a .P file<input type="file" name="upload"/></center>
-        <input type="submit" value="MulVAL"/>
-    </form>
-    <small style="color: red">{{ errinf }}</small>
-    <small style="color: black">{{ goodnews }}</small>
-    <br>
+    <div class="ctrl-panal">
+        <p id="panal-p">Please upload a .P file</p>
+        <form class="panal-form" action="/mulval/mulval/" method="post" enctype="multipart/form-data">
+            <input id="file-button" type="file" name="upload"/>
+            <input class="radio-button " type="submit" value="MulVAL"/>
+        </form>
+        <small class="panal-err-info" style="color: red">{{ errinf }}</small>
+        <small class="panal-err-info" style="color: black">{{ goodnews }}</small>
+    </div>
 
     {% if retcode == 1 %}
-        <form action="/mulval/download/" method="post">
-            <input type="submit" value="Download the AG">
-        </form>
-        <br>
-        <small style="color: red">{{ a2berror }}</small>
-        <form action="/mulval/a2b/" method="post">
-            <select name="Attack Goal">
-                {% for aim in aimlist %}
-                    <option>{{ aim }}</option>
-                {% endfor %}
-                <option value="_">ALL</option>
-            </select>
-            <input type="submit" value="Generate a BAG!"/>
-        </form>
+        <div class="ctrl-panal" style="height: 260px;">
+            <form class="panal-form" action="/mulval/download/" method="post">
+                <input class="radio-button" style="margin-top: 40px;" type="submit" value="Download the AG">
+            </form>
+            <br>
+            <small class="panal-err-info" style="color: red">{{ a2berror }}ugyftuft</small>
+            <form class="panal-form" action="/mulval/a2b/" method="post">
+                <select name="Attack Goal">
+                    {% for aim in aimlist %}
+                        <option>{{ aim }}</option>
+                    {% endfor %}
+                    <option value="_">ALL</option>
+                </select>
+                <input class="radio-button" type="submit" value="Generate a BAG!"/>
+            </form>
+        </div>
     {% endif %}
+
+    <style>
+        .ctrl-panal{
+            padding: 30px;
+            height: 200px;
+            width: 40%;
+            margin: 10px auto;
+            vertical-align: center;
+            background-color: rgba(0,0,0,0.05);
+        }
+        #panal-p{
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        #file-button{
+            text-align: center;
+            margin: 20px auto;
+            border: groove;
+
+        }
+        .panal-err-info{
+            margin-top: -80px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .panal-form{
+            margin: 5px;
+            height: 60px;
+            display: block;
+            width: 100%;
+        }
+        .radio-button{
+            margin: 20px;
+            padding: 10px;
+            height: 40px;
+            width: 40%;
+            border-radius: 20px;
+        }
+        select{
+            margin-top: 80px;
+            width: 100%;
+            display: block;
+        }
+    </style>
+
     <h2 style="color: black">Attack Graph Example</h2>
     <embed src="/static/imgs/AttackGraph.pdf" width="1000" type="application/pdf" height="500" wmode='transparent'/>
     <br>

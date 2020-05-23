@@ -22,9 +22,9 @@ table.stats
 
 table.stats td
 {
-	background-color: #CCC;
+	background-color: #cfdbea;
 	color: #000;
 	padding: 4px;
-	text-align: left;
+	text-align: center;
 	border: 1px #fff solid;
 }

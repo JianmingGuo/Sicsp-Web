@@ -46,7 +46,12 @@ def tomulvaldownload(request):
 
 
 def GetData(request):
-    dbo = DB.DBO()
+    global tpname
+    if request.is_ajax():
+        dic = request.POST
+    tpname = dic["topo"]
+    print(tpname)
+    dbo = DB.DBO(tpname)
     dic = dbo.RetTabEle()
     response = JsonResponse(dic)
     return response
