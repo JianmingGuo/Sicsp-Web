@@ -57,7 +57,7 @@ def GetData(request):
     return response
 
 def PostData(request):
-    dbo = DB.DBO()
+    dbo = DB.DBO(tpname)
     if request.is_ajax():
         dic = request.POST
     v1 = dic["table"]
@@ -77,7 +77,7 @@ def PostData(request):
     return response
 
 def GenMulval(request):
-    tom = TM.ToM()
+    tom = TM.ToM(tpname)
     tom.GenM(tom.Gettup())
     response = JsonResponse({"hello": "hi"})
     return response
