@@ -1,0 +1,4 @@
+vuln_exists('192.168.1.112','CVE-2007-2446','samba',['remoteExploit'],['availability_loss','data_loss','data_modification','other'],'High','l','5353','udp').
+vuln_exists('10.15.10.14','CVE-1999-0524','hp-ux',['local'],[],'Low','l').
+vuln_exists('10.15.10.11','CVE-2007-2446','samba',['remoteExploit'],['availability_loss','data_loss','data_modification','other'],'High','l','443','tcp').
+vuln_exists('10.15.10.11','CVE-1999-0519','outlook',['remoteExploit'],['availability_loss','data_loss','data_modification','other'],'High','l','443','tcp').

@@ -1,0 +1,44 @@
+1,"execCode('10.15.10.11',someUser)","OR",0
+2,"RULE 2 (remote exploit of a server program)","AND",0
+3,"netAccess('10.15.10.11',tcp,'443')","OR",0
+4,"RULE 5 (multi-hop access)","AND",0
+5,"hacl('10.15.10.11','10.15.10.11',tcp,'443')","LEAF",1
+6,"RULE 5 (multi-hop access)","AND",0
+7,"hacl('192.168.1.112','10.15.10.11',tcp,'443')","LEAF",1
+8,"execCode('192.168.1.112',someUser)","OR",0
+9,"RULE 2 (remote exploit of a server program)","AND",0
+10,"netAccess('192.168.1.112',tcp,'443')","OR",0
+11,"RULE 5 (multi-hop access)","AND",0
+12,"hacl('10.15.10.11','192.168.1.112',tcp,'443')","LEAF",1
+13,"RULE 5 (multi-hop access)","AND",0
+14,"hacl('192.168.1.112','192.168.1.112',tcp,'443')","LEAF",1
+15,"RULE 6 (direct network access)","AND",0
+16,"hacl(internet,'192.168.1.112',tcp,'443')","LEAF",1
+17,"attackerLocated(internet)","LEAF",1
+18,"networkServiceInfo('192.168.1.112',samba,tcp,'443',someUser)","LEAF",1
+19,"vulExists('192.168.1.112','CVE-2007-2446',samba,remoteExploit,privEscalation)","LEAF",1
+20,"RULE 2 (remote exploit of a server program)","AND",0
+21,"netAccess('192.168.1.112',udp,'5353')","OR",0
+22,"RULE 5 (multi-hop access)","AND",0
+23,"hacl('10.15.10.11','192.168.1.112',udp,'5353')","LEAF",1
+24,"RULE 5 (multi-hop access)","AND",0
+25,"hacl('192.168.1.112','192.168.1.112',udp,'5353')","LEAF",1
+26,"RULE 6 (direct network access)","AND",0
+27,"hacl(internet,'192.168.1.112',udp,'5353')","LEAF",1
+28,"networkServiceInfo('192.168.1.112',samba,udp,'5353',someUser)","LEAF",1
+29,"RULE 6 (direct network access)","AND",0
+30,"hacl(internet,'10.15.10.11',tcp,'443')","LEAF",1
+31,"networkServiceInfo('10.15.10.11',outlook,tcp,'443',someUser)","LEAF",1
+32,"vulExists('10.15.10.11','CVE-1999-0519',outlook,remoteExploit,privEscalation)","LEAF",1
+33,"RULE 2 (remote exploit of a server program)","AND",0
+34,"networkServiceInfo('10.15.10.11',samba,tcp,'443',someUser)","LEAF",1
+35,"vulExists('10.15.10.11','CVE-2007-2446',samba,remoteExploit,privEscalation)","LEAF",1
+36,"RULE 2 (remote exploit of a server program)","AND",0
+37,"netAccess('10.15.10.11',udp,'5353')","OR",0
+38,"RULE 5 (multi-hop access)","AND",0
+39,"hacl('10.15.10.11','10.15.10.11',udp,'5353')","LEAF",1
+40,"RULE 5 (multi-hop access)","AND",0
+41,"hacl('192.168.1.112','10.15.10.11',udp,'5353')","LEAF",1
+42,"RULE 6 (direct network access)","AND",0
+43,"hacl(internet,'10.15.10.11',udp,'5353')","LEAF",1
+44,"networkServiceInfo('10.15.10.11',samba,udp,'5353',someUser)","LEAF",1

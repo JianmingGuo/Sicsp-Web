@@ -1,0 +1,32 @@
+[xsb_configuration loaded]
+[sysinitrc loaded]
+[xsbbrat loaded]
+
+XSB Version 3.8.0 (Three-Buck Chuck) of October 28, 2017
+[x86_64-unknown-linux-gnu 64 bits; mode: optimal; engine: slg-wam; scheduling: local]
+[Build date: 2020-05-14]
+
+| ?- [Compiling ./run]
+[run compiled, cpu time used: 0.0120 seconds]
+[run loaded]
+[libmulval loaded]
+[translate loaded]
+[attack_trace loaded]
+[auxiliary loaded, cpu time used: 0.0010 seconds]
+[/root/Sics-web/MulVAL2B/src/mulvalsrc/running_rules.P dynamically loaded, cpu time used: 0.0040 seconds]
+[/root/Sics-web/MulVAL2B/src/mulvalsrc/input.P dynamically loaded, cpu time used: 0.0020 seconds]
+[/root/ICS/mulval/src/analyzer/advances_notrim.P dynamically loaded, cpu time used: 0.0000 seconds]
+@@@@@@@@@@@@@@Done transforming in mode dynamic_decl
+
+[/root/Sics-web/MulVAL2B/src/mulvalsrc/dynamic_decl.gen dynamically loaded, cpu time used: 0.0010 seconds]
+@@@@@@@@@@@@@@Done transforming in mode completeTrace2
+
+@@@@@@@@@@@@@@Done transforming in mode completeTrace2
+
+@@@@@@@@@@@@@@Done transforming in mode stripExplanation
+
+Running attack simulation...
+
+yes
+| ?- 
+End XSB (cputime 0.05 secs, elapsetime 0.05 secs)

@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+{% load static %}
+<html lang="en">
+<!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>Sicsp - Home</title>
+		<meta name="description" content="Worthy a Bootstrap-based, Responsive HTML5 Template">
+		<meta name="author" content="htmlcoder.me">
+
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="/static/images/favicon.ico">
+
+		<!-- Web Fonts -->
+		<!-- <link href='http://fonts.useso.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.useso.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'> -->
+
+		<!-- Bootstrap core CSS -->
+		<link href="/static/home/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+		<!-- Font Awesome CSS -->
+		<link href="/static/home/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+		<!-- Plugins -->
+		<link href="/static/home/css/animations.css" rel="stylesheet">
+
+		<!-- Worthy core CSS file -->
+		<link href="/static/home/css/style.css" rel="stylesheet">
+
+		<!-- Custom css --> 
+		<link href="/static/home/css/custom.css" rel="stylesheet">
+{#        <link herf="/static/home/images/totalprocess.png">#}
+	</head>
+
+	<body class="no-trans">
+		<!-- scrollToTop -->
+		<!-- ================ -->
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+
+		<!-- header start -->
+		<!-- ================ --> 
+		<header class="header fixed clearfix navbar navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+
+						<!-- header-left start -->
+						<!-- ================ -->
+						<div class="header-left clearfix">
+
+							<!-- logo -->
+							<div class="logo smooth-scroll">
+								<a href="/blog/home/"><img id="logo" src="/static/home/images/logo.png" alt="Worthy"></a>
+							</div>
+
+							<!-- name-and-slogan -->
+							<div class="site-name-and-slogan smooth-scroll">
+								<div class="site-name"><a href="/blog/home/">Sicsp</a></div>
+								<div class="site-slogan">www.sicsp.cn</div>
+							</div>
+
+						</div>
+						<!-- header-left end -->
+
+					</div>
+					<div class="col-md-8">
+
+						<!-- header-right start -->
+						<!-- ================ -->
+						<div class="header-right clearfix">
+
+							<!-- main-navigation start -->
+							<!-- ================ -->
+							<div class="main-navigation animated">
+
+								<!-- navbar start -->
+								<!-- ================ -->
+								<nav class="navbar navbar-default" role="navigation">
+									<div class="container-fluid">
+
+										<!-- Toggle get grouped for better mobile display -->
+										<div class="navbar-header">
+											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+												<span class="sr-only">Toggle navigation</span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+										</div>
+
+										<!-- Collect the nav links, forms, and other content for toggling -->
+										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
+											<ul class="nav navbar-nav navbar-right">
+												<li class="active"><a href="#banner">主页</a></li>
+												<li><a href={% url 'grass_main' %}>拓扑结构分析</a></li>
+												<li><a href={% url 'toMulVAL' %}>半被动信息获取</a></li>
+												<li><a href={% url 'mulval_window' %}>攻击图生成</a></li>
+                                                <li><a href={% url 'blog_list' %}>博客</a></li>
+{#												<li><a href="#contact">b1</a></li>#}
+{#												<li><a href="#contact">b2</a></li>#}
+												<li><a href="#contact">联系我们</a></li>
+											</ul>
+										</div>
+
+									</div>
+								</nav>
+								<!-- navbar end -->
+
+							</div>
+							<!-- main-navigation end -->
+
+						</div>
+						<!-- header-right end -->
+
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+
+		<!-- banner start -->
+		<!-- ================ -->
+		<div id="banner" class="banner">
+			<div class="banner-image"></div>
+			<div class="banner-caption">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
+							<h1 class="text-center">We are <span>Sicsp</span></h1>
+							<p class="lead text-center">针对工程控制网络的特性，采用半被动式嗅探的方式获取网络的设备信息，漏洞信息，网络拓扑，并利用属性攻击图技术，分析工控网络的突破关系，攻击形式，攻击路径，并用贝叶斯攻击图的形式从攻击者角度分析整个网络的配置和脆弱性信息，针对未使用的目标对象，将攻击路径可视化，并根据已知的信息对未知的结果或原因进行推理和预测。最终本项目建立了病毒数据库，支持工控网络的仿真以及工控网络资产清单的建立。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- banner end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section clearfix object-non-visible" data-animation-effect="fadeIn">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 id="about" class="title text-center">About <span>Sicsp</span></h1>
+						<p class="lead text-center">本项目针对工控网络，开创性地提出了半被动嗅探的数据分析方法，并借助贝叶斯攻击图的技术对目标工控网络进行安全态势感知分析。</p>
+						<div class="space"></div>
+						<div class="row">
+							<div class="col-md-6">
+								<img src="/static/home/images/part_about.jpg" alt="">
+								<div class="space"></div>
+							</div>
+							<div class="col-md-6" style="font-size: 18px;">
+								<p style="text-indent:2em;">近年来，工业控制系统信息安全事件频繁发生，各国组织与研究人员开展大量研究，致力于增强工控系统的安全性。与其他网络相比，工控网络有着其独特性，工控网络安全是关键基础设施的关键部分，一旦被破坏后果不可估量。工控网络较为脆弱，很多主机并没有保持更新，导致存在很多漏洞且未更新补丁，易受到攻击。工控网络往往是持续运行的，而主动扫描等方法会对工控网络产生一定影响，会导致停机，影响生产，也正是因为工控系统的持续运行，工控网络需要全生命周期的安全防护。</p>
+                                <br/>
+                                <p style="text-indent:2em;">本项目针对工控网络，开创性地提出了半被动嗅探的数据分析方法，并借助贝叶斯攻击图的技术对目标工控网络进行安全态势感知分析。</p>
+{#								<ul class="list-unstyled">#}
+{#									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Lorem ipsum dolor sit amet</li>#}
+{#									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Reiciendis deleniti neque aliquid</li>#}
+{#									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Ipsam fuga error commodi</li>#}
+{#									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Lorem ipsum dolor sit amet</li>#}
+{#									<li><i class="fa fa-caret-right pr-10 text-colored"></i> Dignissimos molestiae necessitatibus</li>#}
+{#								</ul>#}
+							</div>
+						</div>
+						<div class="space"></div>
+						<h2>项目功能</h2>
+						<div class="row">
+
+                            <div class="col-md-6">
+                                <br>
+                                <br>
+                                <br>
+								<img src="/static/images/项目功能图.png" style="" alt="">
+								<div class="space"></div>
+							</div>
+                                {#							</div><div class="col-md-6">#}
+{#								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi adipisci illo, voluptatum ipsam fuga error commodi architecto, laudantium culpa tenetur at id, beatae placeat deserunt iure quas voluptas fugit eveniet.</p>#}
+{#								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ducimus explicabo quibusdam temporibus deserunt doloremque pariatur ea, animi a. Delectus similique atque eligendi, enim vel reiciendis deleniti neque aliquid, sit?</p>#}
+{#								<p>Vitae dolores quam magnam accusantium nam, voluptatibus expedita delectus, dolorum odio magni ut nemo nihil ex earum pariatur molestias velit eveniet, facere autem saepe aut. Ut minima itaque porro facere. Cumque vitae autem, dignissimos molestiae necessitatibus culpa aliquam deleniti soluta sunt voluptatibus tenetur, unde dolorem eligendi doloribus quibusdam facere totam. Possimus atque deserunt numquam aliquam magnam, facilis officiis illo alias ipsa voluptas laborum, praesentium eveniet nobis velit voluptatem odio eligendi, corporis et iste distinctio! Repellendus, id, ad.</p>#}
+{#							</div>#}
+							<div class="col-md-6">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingOne">
+											<h4 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+													工控网络仿真
+												</a>
+											</h4>
+										</div>
+										<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+											<div class="panel-body" >
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 基于modbus、tcp/ip的通信协议</li>
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 模拟网络节点间的通信，互相发送报文</li>
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 生成网络拓扑分析</li>
+                                                 </ul>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingTwo">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+													工控网络拓扑分析
+												</a>
+											</h4>
+										</div>
+										<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+											<div class="panel-body">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 通过被动嗅探完成，不影响工控网络的持续运行</li>
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 获取设备信息，包括MAC地址，IP地址、操作系统、设备型号等</li>
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 获取各具体设备的互联关系</li>
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 用户友好的图形界面</li>
+                                                </ul>
+                                            </div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingThree">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+													半被动扫描
+												</a>
+											</h4>
+										</div>
+										<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+											<div class="panel-body">
+                                                 <ul class="list-unstyled">
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 支持用户手动添加工控网络资产信息，并通过报文数据保持更新</li>
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 支持用户手动设置各主机间的读写关系</li>
+                                                 </ul>
+                                            </div>
+										</div>
+									</div>
+                                    <div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingfour">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+													生成攻击图
+												</a>
+											</h4>
+										</div>
+										<div id="collapsefour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour">
+											<div class="panel-body">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 根据被动嗅探以及半被动扫描得到的结果分析设备信息、漏洞信息、网络拓扑</li>
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 分析工控网络中的安全漏洞并生成属性攻击图</li>
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 攻击图可以体现漏洞关系、攻击形式、攻击路径</li>
+                                                 </ul>
+											</div>
+										</div>
+									</div>
+                                    <div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingfive">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+													贝叶斯攻击图分析
+												</a>
+											</h4>
+										</div>
+										<div id="collapsefive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive">
+											<div class="panel-body">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 根据CVSS和贝叶斯概率进行概率公式推导</li>
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 消除含圈路径、结构转换构建网络结构</li>
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 分析起始节点到攻击目标的路径并计算每条攻击路径成功的概率</li>
+                                                 </ul>
+											</div>
+										</div>
+									</div>
+                                    <div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingsix">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+													建立工控网络资产清单
+												</a>
+											</h4>
+										</div>
+										<div id="collapsesix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingsix">
+											<div class="panel-body">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 便于网络管理者实时了网络信息</li>
+                                                    
+                                                 </ul>
+											</div>
+										</div>
+									</div>
+                                    <div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingseven">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseseven" aria-expanded="false" aria-controls="collapsefive">
+													针对工控网络建立漏洞数据库
+												</a>
+											</h4>
+										</div>
+										<div id="collapseseven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingseven">
+											<div class="panel-body">
+                                                <ul class="list-unstyled">
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 
+                                                    漏洞信息来源为CNVD和NVD</li>
+                                                    <li><i class="fa fa-caret-right pr-10 text-colored"></i> 记录多达10万条，每个漏洞信息详细</li>
+                                                 </ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section translucent-bg bg-image-1 blue" style="height: 1200px">
+			<div class="container object-non-visible" data-animation-effect="fadeIn">
+				<h1 id="services"  class="text-center title">项目亮点</h1>
+				<div class="space"></div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="media">
+							<div class="media-body text-right">
+								<h4 class="media-heading">半被动式的安全态势感知</h4>
+								<p>跟随工控网络的特性，结合被动嗅探和主动扫描采用半被动式的信息获取</p>
+							</div>
+							<div class="media-right">
+								<i class="fa fa-cog"></i>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-body text-right">
+								<h4 class="media-heading">工控网络适应性强，易迁移至其他网。</h4>
+								<p>各功能针对工控网络完成，但很多功能依然适用于其他普通网络，迁移性好。</p>
+							</div>
+							<div class="media-right">
+								<i class="fa fa-check"></i>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-body text-right">
+								<h4 class="media-heading">输入格式多样</h4>
+								<p>用户有三种输入方式，datalog文件，nessus扫描文件，被动嗅探的pcap文件。</p>
+							</div>
+							<div class="media-right">
+								<i class="fa fa-desktop"></i>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-body text-right">
+								<h4 class="media-heading">数据库信息完整并保持更新</h4>
+								<p>依托NVD和CNVD两大数据库，本项目建立了病毒数据库，包含信息超过10万条。</p>
+							</div>
+							<div class="media-right">
+								<i class="fa fa-users"></i>
+							</div>
+						</div>
+					</div>
+					<div class="space visible-xs"></div>
+					<div class="col-sm-6">
+						<div class="media">
+							<div class="media-left">
+								<i class="fa fa-leaf"></i>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">贝叶斯攻击图技术</h4>
+								<p> 透过贝叶斯攻击图技术分析攻击路径并可视化，至少要根据已知信息预测未来的安全问题。</p>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<i class="fa fa-area-chart"></i>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">用户友好的可视化界面</h4>
+								<p>基于Django框架制作网页，每个功能都有对用户友好的可视化界面。</p>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<i class="fa fa-child"></i>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">web应用，系统兼容性好</h4>
+								<p>以网页的形式呈现给用户，数据存储与功能的实现依托服务器完成，对用户系统没有要求。</p>
+							</div>
+						</div>
+						<div class="media">
+							<div class="media-left">
+								<i class="fa fa-codepen"></i>
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">功能完整，操作适当</h4>
+								<p>总体功能完整形成安全分析链，操作补充，用户易于上手。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+{#		<div class="default-bg space blue">#}
+{#			<div class="container">#}
+{#				<div class="row">#}
+{#					<div class="col-md-8 col-md-offset-2">#}
+{#						<h1 class="text-center">Let's Work Together!</h1>#}
+{#					</div>#}
+{#				</div>#}
+{#			</div>#}
+{#		</div>#}
+		<!-- section end -->
+        <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
+
+		<!-- section start -->
+		<!-- ================ -->
+		<div class="section">
+			<div class="container">
+				<h1 class="text-center title" id="portfolio">Our team</h1>
+				<div class="separator"></div>
+				<p class="lead text-center">这是我们团队成员<br> 一只青春、活力、创新的队伍</p>
+				<br>			
+				<div class="row object-non-visible" data-animation-effect="fadeIn">
+					<div class="col-md-12">
+
+						<!-- isotope filters start -->
+{#						<div class="filters text-center">#}
+{#							<ul class="nav nav-pills">#}
+{#								<li class="active"><a href="#" data-filter="*">All</a></li>#}
+{#								<li><a href="#" data-filter=".web-design">Web design</a></li>#}
+{#								<li><a href="#" data-filter=".app-development">App development</a></li>#}
+{#								<li><a href="#" data-filter=".site-building">Site building</a></li>#}
+{#							</ul>#}
+{#						</div>#}
+						<!-- isotope filters end -->
+
+						<!-- portfolio items start -->
+						<div class="isotope-container row grid-space-20">
+							<div class="col-sm-6 col-md-3 isotope-item web-design">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="/static/home/images/portfolio-1.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-1">
+											<i class="fa fa-search-plus"></i>
+											<span>Web Design</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-1">Project Title</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-1" tabindex="-1" role="dialog" aria-labelledby="project-1-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+{#                                        <iframe style="height: 700px; width: 100%;" src="http://www.milkyship.cn"></iframe>#}
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-1-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													</div>
+{#                                                    <img src="">#}
+
+													<div class="col-md-6">
+														<img src="/static/home/images/portfolio-1.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+                                <br>
+								<!-- Modal end -->
+							</div>
+
+							<div class="col-sm-6 col-md-3 isotope-item app-development">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="/static/home/images/portfolio-2.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-2">
+											<i class="fa fa-search-plus"></i>
+											<span>App Development</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-2">Project Title</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-2" tabindex="-1" role="dialog" aria-labelledby="project-2-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-2-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="/static/home/images/portfolio-2.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
+							<div class="col-sm-6 col-md-3 isotope-item web-design">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="/static/home/images/portfolio-3.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-3">
+											<i class="fa fa-search-plus"></i>
+											<span>Web Design</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-3">Project Title</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-3" tabindex="-1" role="dialog" aria-labelledby="project-3-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-3-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="/static/home/images/portfolio-3.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
+							<div class="col-sm-6 col-md-3 isotope-item site-building">
+								<div class="image-box">
+									<div class="overlay-container">
+										<img src="/static/home/images/portfolio-4.jpg" alt="">
+										<a class="overlay" data-toggle="modal" data-target="#project-4">
+											<i class="fa fa-search-plus"></i>
+											<span>Site Building</span>
+										</a>
+									</div>
+									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-4">Project Title</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="project-4" tabindex="-1" role="dialog" aria-labelledby="project-4-label" aria-hidden="true">
+									<div class="modal-dialog modal-lg">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+												<h4 class="modal-title" id="project-4-label">Project Title</h4>
+											</div>
+											<div class="modal-body">
+												<h3>Project Description</h3>
+												<div class="row">
+													<div class="col-md-6">
+														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>
+														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>
+													</div>
+													<div class="col-md-6">
+														<img src="/static/home/images/portfolio-4.jpg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Modal end -->
+							</div>
+							
+{#							<div class="col-sm-6 col-md-3 isotope-item app-development">#}
+{#								<div class="image-box">#}
+{#									<div class="overlay-container">#}
+{#										<img src="/static/home/images/portfolio-5.jpg" alt="">#}
+{#										<a class="overlay" data-toggle="modal" data-target="#project-5">#}
+{#											<i class="fa fa-search-plus"></i>#}
+{#											<span>App Development</span>#}
+{#										</a>#}
+{#									</div>#}
+{#									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-5">Project Title</a>#}
+{#								</div>#}
+{#								<!-- Modal -->#}
+{#								<div class="modal fade" id="project-5" tabindex="-1" role="dialog" aria-labelledby="project-5-label" aria-hidden="true">#}
+{#									<div class="modal-dialog modal-lg">#}
+{#										<div class="modal-content">#}
+{#											<div class="modal-header">#}
+{#												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>#}
+{#												<h4 class="modal-title" id="project-5-label">Project Title</h4>#}
+{#											</div>#}
+{#											<div class="modal-body">#}
+{#												<h3>Project Description</h3>#}
+{#												<div class="row">#}
+{#													<div class="col-md-6">#}
+{#														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>#}
+{#														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>#}
+{#													</div>#}
+{#													<div class="col-md-6">#}
+{#														<img src="/static/home/images/portfolio-5.jpg" alt="">#}
+{#													</div>#}
+{#												</div>#}
+{#											</div>#}
+{#											<div class="modal-footer">#}
+{#												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>#}
+{#											</div>#}
+{#										</div>#}
+{#									</div>#}
+{#								</div>#}
+{#								<!-- Modal end -->#}
+{#							</div>#}
+							
+{#							<div class="col-sm-6 col-md-3 isotope-item web-design">#}
+{#								<div class="image-box">#}
+{#									<div class="overlay-container">#}
+{#										<img src="/static/home/images/portfolio-6.jpg" alt="">#}
+{#										<a class="overlay" data-toggle="modal" data-target="#project-6">#}
+{#											<i class="fa fa-search-plus"></i>#}
+{#											<span>Web Design</span>#}
+{#										</a>#}
+{#									</div>#}
+{#									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-6">Project Title</a>#}
+{#								</div>#}
+{#								<!-- Modal -->#}
+{#								<div class="modal fade" id="project-6" tabindex="-1" role="dialog" aria-labelledby="project-6-label" aria-hidden="true">#}
+{#									<div class="modal-dialog modal-lg">#}
+{#										<div class="modal-content">#}
+{#											<div class="modal-header">#}
+{#												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>#}
+{#												<h4 class="modal-title" id="project-6-label">Project Title</h4>#}
+{#											</div>#}
+{#											<div class="modal-body">#}
+{#												<h3>Project Description</h3>#}
+{#												<div class="row">#}
+{#													<div class="col-md-6">#}
+{#														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>#}
+{#														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>#}
+{#													</div>#}
+{#													<div class="col-md-6">#}
+{#														<img src="/static/home/images/portfolio-6.jpg" alt="">#}
+{#													</div>#}
+{#												</div>#}
+{#											</div>#}
+{#											<div class="modal-footer">#}
+{#												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>#}
+{#											</div>#}
+{#										</div>#}
+{#									</div>#}
+{#								</div>#}
+{#								<!-- Modal end -->#}
+{#							</div>#}
+							
+{#							<div class="col-sm-6 col-md-3 isotope-item site-building">#}
+{#								<div class="image-box">#}
+{#									<div class="overlay-container">#}
+{#										<img src="/static/home/images/portfolio-7.jpg" alt="">#}
+{#										<a class="overlay" data-toggle="modal" data-target="#project-7">#}
+{#											<i class="fa fa-search-plus"></i>#}
+{#											<span>Site Building</span>#}
+{#										</a>#}
+{#									</div>#}
+{#									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-7">Project Title</a>#}
+{#								</div>#}
+{#								<!-- Modal -->#}
+{#								<div class="modal fade" id="project-7" tabindex="-1" role="dialog" aria-labelledby="project-7-label" aria-hidden="true">#}
+{#									<div class="modal-dialog modal-lg">#}
+{#										<div class="modal-content">#}
+{#											<div class="modal-header">#}
+{#												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>#}
+{#												<h4 class="modal-title" id="project-7-label">Project Title</h4>#}
+{#											</div>#}
+{#											<div class="modal-body">#}
+{#												<h3>Project Description</h3>#}
+{#												<div class="row">#}
+{#													<div class="col-md-6">#}
+{#														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>#}
+{#														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>#}
+{#													</div>#}
+{#													<div class="col-md-6">#}
+{#														<img src="/static/home/images/portfolio-7.jpg" alt="">#}
+{#													</div>#}
+{#												</div>#}
+{#											</div>#}
+{#											<div class="modal-footer">#}
+{#												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>#}
+{#											</div>#}
+{#										</div>#}
+{#									</div>#}
+{#								</div>#}
+{#								<!-- Modal end -->#}
+{#							</div>#}
+							
+{#							<div class="col-sm-6 col-md-3 isotope-item web-design">#}
+{#								<div class="image-box">#}
+{#									<div class="overlay-container">#}
+{#										<img src="/static/home/images/portfolio-8.jpg" alt="">#}
+{#										<a class="overlay" data-toggle="modal" data-target="#project-8">#}
+{#											<i class="fa fa-search-plus"></i>#}
+{#											<span>Web Design</span>#}
+{#										</a>#}
+{#									</div>#}
+{#									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-8">Project Title</a>#}
+{#								</div>#}
+{#								<!-- Modal -->#}
+{#								<div class="modal fade" id="project-8" tabindex="-1" role="dialog" aria-labelledby="project-8-label" aria-hidden="true">#}
+{#									<div class="modal-dialog modal-lg">#}
+{#										<div class="modal-content">#}
+{#											<div class="modal-header">#}
+{#												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>#}
+{#												<h4 class="modal-title" id="project-8-label">Project Title</h4>#}
+{#											</div>#}
+{#											<div class="modal-body">#}
+{#												<h3>Project Description</h3>#}
+{#												<div class="row">#}
+{#													<div class="col-md-6">#}
+{#														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>#}
+{#														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>#}
+{#													</div>#}
+{#													<div class="col-md-6">#}
+{#														<img src="/static/home/images/portfolio-8.jpg" alt="">#}
+{#													</div>#}
+{#												</div>#}
+{#											</div>#}
+{#											<div class="modal-footer">#}
+{#												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>#}
+{#											</div>#}
+{#										</div>#}
+{#									</div>#}
+{#								</div>#}
+{#								<!-- Modal end -->#}
+{#							</div>#}
+
+{#							<div class="col-sm-6 col-md-3 isotope-item web-design">#}
+{#								<div class="image-box">#}
+{#									<div class="overlay-container">#}
+{#										<img src="/static/home/images/portfolio-9.jpg" alt="">#}
+{#										<a class="overlay" data-toggle="modal" data-target="#project-9">#}
+{#											<i class="fa fa-search-plus"></i>#}
+{#											<span>Web Design</span>#}
+{#										</a>#}
+{#									</div>#}
+{#									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-9">Project Title</a>#}
+{#								</div>#}
+{#								<!-- Modal -->#}
+{#								<div class="modal fade" id="project-9" tabindex="-1" role="dialog" aria-labelledby="project-9-label" aria-hidden="true">#}
+{#									<div class="modal-dialog modal-lg">#}
+{#										<div class="modal-content">#}
+{#											<div class="modal-header">#}
+{#												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>#}
+{#												<h4 class="modal-title" id="project-9-label">Project Title</h4>#}
+{#											</div>#}
+{#											<div class="modal-body">#}
+{#												<h3>Project Description</h3>#}
+{#												<div class="row">#}
+{#													<div class="col-md-6">#}
+{#														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>#}
+{#														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>#}
+{#													</div>#}
+{#													<div class="col-md-6">#}
+{#														<img src="/static/home/images/portfolio-9.jpg" alt="">#}
+{#													</div>#}
+{#												</div>#}
+{#											</div>#}
+{#											<div class="modal-footer">#}
+{#												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>#}
+{#											</div>#}
+{#										</div>#}
+{#									</div>#}
+{#								</div>#}
+{#								<!-- Modal end -->#}
+{#							</div>#}
+
+{#							<div class="col-sm-6 col-md-3 isotope-item site-building">#}
+{#								<div class="image-box">#}
+{#									<div class="overlay-container">#}
+{#										<img src="/static/home/images/portfolio-10.jpg" alt="">#}
+{#										<a class="overlay" data-toggle="modal" data-target="#project-10">#}
+{#											<i class="fa fa-search-plus"></i>#}
+{#											<span>Site Building</span>#}
+{#										</a>#}
+{#									</div>#}
+{#									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-10">Project Title</a>#}
+{#								</div>#}
+{#								<!-- Modal -->#}
+{#								<div class="modal fade" id="project-10" tabindex="-1" role="dialog" aria-labelledby="project-10-label" aria-hidden="true">#}
+{#									<div class="modal-dialog modal-lg">#}
+{#										<div class="modal-content">#}
+{#											<div class="modal-header">#}
+{#												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>#}
+{#												<h4 class="modal-title" id="project-10-label">Project Title</h4>#}
+{#											</div>#}
+{#											<div class="modal-body">#}
+{#												<h3>Project Description</h3>#}
+{#												<div class="row">#}
+{#													<div class="col-md-6">#}
+{#														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>#}
+{#														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>#}
+{#													</div>#}
+{#													<div class="col-md-6">#}
+{#														<img src="/static/home/images/portfolio-10.jpg" alt="">#}
+{#													</div>#}
+{#												</div>#}
+{#											</div>#}
+{#											<div class="modal-footer">#}
+{#												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>#}
+{#											</div>#}
+{#										</div>#}
+{#									</div>#}
+{#								</div>#}
+{#								<!-- Modal end -->#}
+{#							</div>#}
+{##}
+{#							<div class="col-sm-6 col-md-3 isotope-item web-design">#}
+{#								<div class="image-box">#}
+{#									<div class="overlay-container">#}
+{#										<img src="/static/home/images/portfolio-11.jpg" alt="">#}
+{#										<a class="overlay" data-toggle="modal" data-target="#project-11">#}
+{#											<i class="fa fa-search-plus"></i>#}
+{#											<span>Web Design</span>#}
+{#										</a>#}
+{#									</div>#}
+{#									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-11">Project Title</a>#}
+{#								</div>#}
+{#								<!-- Modal -->#}
+{#								<div class="modal fade" id="project-11" tabindex="-1" role="dialog" aria-labelledby="project-11-label" aria-hidden="true">#}
+{#									<div class="modal-dialog modal-lg">#}
+{#										<div class="modal-content">#}
+{#											<div class="modal-header">#}
+{#												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>#}
+{#												<h4 class="modal-title" id="project-11-label">Project Title</h4>#}
+{#											</div>#}
+{#											<div class="modal-body">#}
+{#												<h3>Project Description</h3>#}
+{#												<div class="row">#}
+{#													<div class="col-md-6">#}
+{#														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>#}
+{#														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>#}
+{#													</div>#}
+{#													<div class="col-md-6">#}
+{#														<img src="/static/home/images/portfolio-11.jpg" alt="">#}
+{#													</div>#}
+{#												</div>#}
+{#											</div>#}
+{#											<div class="modal-footer">#}
+{#												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>#}
+{#											</div>#}
+{#										</div>#}
+{#									</div>#}
+{#								</div>#}
+{#								<!-- Modal end -->#}
+{#							</div>#}
+{##}
+{#							<div class="col-sm-6 col-md-3 isotope-item app-development">#}
+{#								<div class="image-box">#}
+{#									<div class="overlay-container">#}
+{#										<img src="/static/home/images/portfolio-12.jpg" alt="">#}
+{#										<a class="overlay" data-toggle="modal" data-target="#project-12">#}
+{#											<i class="fa fa-search-plus"></i>#}
+{#											<span>App Development</span>#}
+{#										</a>#}
+{#									</div>#}
+{#									<a class="btn btn-default btn-block" data-toggle="modal" data-target="#project-12">Project Title</a>#}
+{#								</div>#}
+{#								<!-- Modal -->#}
+{#								<div class="modal fade" id="project-12" tabindex="-1" role="dialog" aria-labelledby="project-12-label" aria-hidden="true">#}
+{#									<div class="modal-dialog modal-lg">#}
+{#										<div class="modal-content">#}
+{#											<div class="modal-header">#}
+{#												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>#}
+{#												<h4 class="modal-title" id="project-12-label">Project Title</h4>#}
+{#											</div>#}
+{#											<div class="modal-body">#}
+{#												<h3>Project Description</h3>#}
+{#												<div class="row">#}
+{#													<div class="col-md-6">#}
+{#														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed, quidem quis praesentium, ut unde. Quae sed, incidunt laudantium nesciunt, optio corporis quod earum pariatur omnis illo saepe numquam suscipit, nemo placeat dignissimos eius mollitia et quas officia doloremque ipsum labore rem deserunt vero! Magnam totam delectus accusantium voluptas et, tempora quos atque, fugiat, obcaecati voluptatibus commodi illo voluptates dolore nemo quo soluta quis.</p>#}
+{#														<p>Molestiae sed enim laboriosam atque delectus voluptates rerum nostrum sapiente obcaecati molestias quasi optio exercitationem, voluptate quis consequatur libero incidunt, in, quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos nobis officiis, autem earum tenetur quidem. Quae non dicta earum. Ipsum autem eaque cum dolor placeat corporis quisquam dolorum at nesciunt.</p>#}
+{#													</div>#}
+{#													<div class="col-md-6">#}
+{#														<img src="/static/home/images/portfolio-12.jpg" alt="">#}
+{#													</div>#}
+{#												</div>#}
+{#											</div>#}
+{#											<div class="modal-footer">#}
+{#												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>#}
+{#											</div>#}
+{#										</div>#}
+{#									</div>#}
+{#								</div>#}
+{#								<!-- Modal end -->#}
+{#							</div>#}
+{##}
+{#						</div>#}
+{#						<!-- portfolio items end -->#}
+{#					#}
+{#					</div>#}
+{#				</div>#}
+{#			</div>#}
+{#		</div>#}
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+{#		<div class="section translucent-bg bg-image-2 pb-clear">#}
+{#			<div class="container object-non-visible" data-animation-effect="fadeIn">#}
+{#				<h1 id="clients" class="title text-center">Clients</h1>#}
+{#				<div class="space"></div>#}
+{#				<div class="row">#}
+{#					<div class="col-md-4">#}
+{#						<div class="media testimonial">#}
+{#							<div class="media-left">#}
+{#								<img src="/static/home/images/testimonial-1.png" alt="">#}
+{#							</div>#}
+{#							<div class="media-body">#}
+{#								<h3 class="media-heading">You are Amazing!</h3>#}
+{#								<blockquote>#}
+{#									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo.</p>#}
+{#									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>#}
+{#								</blockquote>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+{#					<div class="col-md-4">#}
+{#						<div class="media testimonial">#}
+{#							<div class="media-left">#}
+{#								<img src="/static/home/images/testimonial-2.png" alt="">#}
+{#							</div>#}
+{#							<div class="media-body">#}
+{#								<h3 class="media-heading">Yeah!</h3>#}
+{#								<blockquote>#}
+{#									<p>Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus.</p>#}
+{#									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>#}
+{#								</blockquote>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+{#					<div class="col-md-4">#}
+{#						<div class="media testimonial">#}
+{#							<div class="media-left">#}
+{#								<img src="/static/home/images/testimonial-3.png" alt="">#}
+{#							</div>#}
+{#							<div class="media-body">#}
+{#								<h3 class="media-heading">Thank You!</h3>#}
+{#								<blockquote>#}
+{#									<p>Aperiam consequatur quo quis exercitationem reprehenderit suscipit iste placeat.</p>#}
+{#									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>#}
+{#								</blockquote>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+{#				</div>#}
+{#				<div class="row">#}
+{#					<div class="col-md-4">#}
+{#						<div class="media testimonial">#}
+{#							<div class="media-left">#}
+{#								<img src="/static/home/images/testimonial-2.png" alt="">#}
+{#							</div>#}
+{#							<div class="media-body">#}
+{#								<h3 class="media-heading">Thank You!</h3>#}
+{#								<blockquote>#}
+{#									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo.</p>#}
+{#									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>#}
+{#								</blockquote>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+{#					<div class="col-md-4">#}
+{#						<div class="media testimonial">#}
+{#							<div class="media-left">#}
+{#								<img src="/static/home/images/testimonial-3.png" alt="">#}
+{#							</div>#}
+{#							<div class="media-body">#}
+{#								<h3 class="media-heading">Amazing!</h3>#}
+{#								<blockquote>#}
+{#									<p>Iure aperiam consequatur quo quis exercitationem reprehenderit dolor vel ducimus.</p>#}
+{#									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>#}
+{#								</blockquote>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+{#					<div class="col-md-4">#}
+{#						<div class="media testimonial">#}
+{#							<div class="media-left">#}
+{#								<img src="/static/home/images/testimonial-1.png" alt="">#}
+{#							</div>#}
+{#							<div class="media-body">#}
+{#								<h3 class="media-heading">Best!</h3>#}
+{#								<blockquote>#}
+{#									<p>Aperiam consequatur quo quis exercitationem reprehenderit suscipit iste placeat.</p>#}
+{#									<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>#}
+{#								</blockquote>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+{#				</div>#}
+{#			</div>#}
+			<!-- section start -->
+{#			<!-- ================ -->#}
+{#            <br>#}
+{#            <br>#}
+{#            <br>#}
+{#            <br>#}
+{#            <br>#}
+{#            <br>#}
+{#            <br>#}
+			</div>
+			<div class="translucent-bg blue">
+				<div class="container">
+					<div class="list-horizontal">
+						<div class="row">
+							<div class="col-xs-2">
+								<div class="list-horizontal-item">
+									<img src="/static/home/images/client-1.png" alt="client">
+								</div>
+							</div>
+							<div class="col-xs-2">
+								<div class="list-horizontal-item">
+									<img src="/static/home/images/client-2.png" alt="client">
+								</div>
+							</div>
+							<div class="col-xs-2">
+								<div class="list-horizontal-item">
+									<img src="/static/home/images/client-3.png" alt="client">
+								</div>
+							</div>
+							<div class="col-xs-2">
+								<div class="list-horizontal-item">
+									<img src="/static/home/images/client-4.png" alt="client">
+								</div>
+							</div>
+							<div class="col-xs-2">
+								<div class="list-horizontal-item">
+									<img src="/static/home/images/client-5.png" alt="client">
+								</div>
+							</div>
+							<div class="col-xs-2">
+								<div class="list-horizontal-item">
+									<img src="/static/home/images/client-6.png" alt="client">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- section end -->
+{#		</div>#}
+		<!-- section end -->
+
+		<!-- section start -->
+		<!-- ================ -->
+{#		<div class="default-bg space">#}
+{#			<div class="container">#}
+{#				<div class="row">#}
+{#					<div class="col-md-8 col-md-offset-2">#}
+{#						<h1 class="text-center">10000+ Happy Clients!</h1>#}
+{#					</div>#}
+{#				</div>#}
+{#			</div>#}
+{#		</div>#}
+		<!-- section end -->
+
+		<!-- footer start -->
+		<!-- ================ -->
+		<footer id="footer">
+
+			<!-- .footer start -->
+			<!-- ================ -->
+			<div class="footer section">
+				<div class="container">
+					<h1 class="title text-center" id="contact">联系我们</h1>
+					<div class="space"></div>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="footer-content">
+								<p class="large"> 针对工程控制网络的特性，采用半被动式嗅探的方式获取网络的设备信息，漏洞信息，网络拓扑，并利用属性攻击图技术，分析工控网络的突破关系，攻击形式，攻击路径，并用贝叶斯攻击图的形式从攻击者角度分析整个网络的配置和脆弱性信息，针对未使用的目标对象，将攻击路径可视化，并根据已知的信息对未知的结果或原因进行推理和预测。最终本项目建立了病毒数据库，支持工控网络的仿真以及工控网络资产清单的建立。</p>
+								<ul class="list-icons">
+									<li><i class="fa fa-map-marker pr-10"></i> One infinity loop, 54100</li>
+									<li><i class="fa fa-phone pr-10"></i> +00 1234567890</li>
+									<li><i class="fa fa-fax pr-10"></i> +00 1234567891 </li>
+									<li><i class="fa fa-envelope-o pr-10"></i> your@email.com</li>
+								</ul>
+								<ul class="social-links">
+									<li class="facebook"><a target="_blank" href="http://www.cssmoban.com"><i class="fa fa-facebook"></i></a></li>
+									<li class="twitter"><a target="_blank" href="http://www.cssmoban.com"><i class="fa fa-twitter"></i></a></li>
+									<li class="googleplus"><a target="_blank" href="http://www.cssmoban.com"><i class="fa fa-google-plus"></i></a></li>
+									<li class="skype"><a target="_blank" href="http://www.cssmoban.com"><i class="fa fa-skype"></i></a></li>
+									<li class="linkedin"><a target="_blank" href="http://www.cssmoban.com"><i class="fa fa-linkedin"></i></a></li>
+									<li class="youtube"><a target="_blank" href="http://www.cssmoban.com"><i class="fa fa-youtube"></i></a></li>
+									<li class="flickr"><a target="_blank" href="http://www.cssmoban.com"><i class="fa fa-flickr"></i></a></li>
+									<li class="pinterest"><a target="_blank" href="http://www.cssmoban.com"><i class="fa fa-pinterest"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="footer-content">
+								<form action="/contactme/" role="form" id="footer-form" method="post" >
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="name2">Name</label>
+										<input type="text" class="form-control" id="name2" placeholder="Name" name="name2" required>
+										<i class="fa fa-user form-control-feedback"></i>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="email2">Email address</label>
+										<input type="email" class="form-control" id="email2" placeholder="Enter email" name="email2" required>
+										<i class="fa fa-envelope form-control-feedback"></i>
+									</div>
+									<div class="form-group has-feedback">
+										<label class="sr-only" for="message2">Message</label>
+										<textarea class="form-control" rows="8" id="message2" placeholder="Message" name="message2" required></textarea>
+										<i class="fa fa-pencil form-control-feedback"></i>
+									</div>
+									<input type="submit" value="Send" class="btn btn-default">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .footer end -->
+
+			<!-- .subfooter start -->
+			<!-- ================ -->
+			<div class="subfooter">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<!-- <p class="text-center">Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
+</p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- .subfooter end -->
+
+		</footer>
+		<!-- footer end -->
+
+		<!-- JavaScript files placed at the end of the document so the pages load faster
+		================================================== -->
+		<!-- Jquery and Bootstap core js files -->
+		<script type="text/javascript" src="/static/home/plugins/jquery.min.js"></script>
+		<script type="text/javascript" src="/static/home/bootstrap/js/bootstrap.min.js"></script>
+
+		<!-- Modernizr javascript -->
+		<script type="text/javascript" src="/static/home/plugins/modernizr.js"></script>
+
+		<!-- Isotope javascript -->
+		<script type="text/javascript" src="/static/home/plugins/isotope/isotope.pkgd.min.js"></script>
+		
+		<!-- Backstretch javascript -->
+		<script type="text/javascript" src="/static/home/plugins/jquery.backstretch.min.js"></script>
+
+		<!-- Appear javascript -->
+		<script type="text/javascript" src="/static/home/plugins/jquery.appear.js"></script>
+
+		<!-- Initialization of Plugins -->
+		<script type="text/javascript" src="/static/home/js/template.js"></script>
+
+		<!-- Custom Scripts -->
+		<script type="text/javascript" src="/static/home/js/custom.js"></script>
+
+	</body>
+</html>

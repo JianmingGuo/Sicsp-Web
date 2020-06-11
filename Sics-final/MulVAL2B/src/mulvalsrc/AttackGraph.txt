@@ -1,0 +1,100 @@
+1,"execCode('10.15.10.11',someUser)","OR",0
+2,"RULE 2 (remote exploit of a server program)","AND",0
+3,"netAccess('10.15.10.11',tcp,'443')","OR",0
+4,"RULE 5 (multi-hop access)","AND",0
+5,"hacl('10.15.10.11','10.15.10.11',tcp,'443')","LEAF",1
+4,5,-1
+4,1,-1
+3,4,-1
+6,"RULE 5 (multi-hop access)","AND",0
+7,"hacl('192.168.1.112','10.15.10.11',tcp,'443')","LEAF",1
+6,7,-1
+8,"execCode('192.168.1.112',someUser)","OR",0
+9,"RULE 2 (remote exploit of a server program)","AND",0
+10,"netAccess('192.168.1.112',tcp,'443')","OR",0
+11,"RULE 5 (multi-hop access)","AND",0
+12,"hacl('10.15.10.11','192.168.1.112',tcp,'443')","LEAF",1
+11,12,-1
+11,1,-1
+10,11,-1
+13,"RULE 5 (multi-hop access)","AND",0
+14,"hacl('192.168.1.112','192.168.1.112',tcp,'443')","LEAF",1
+13,14,-1
+13,8,-1
+10,13,-1
+15,"RULE 6 (direct network access)","AND",0
+16,"hacl(internet,'192.168.1.112',tcp,'443')","LEAF",1
+15,16,-1
+17,"attackerLocated(internet)","LEAF",1
+15,17,-1
+10,15,-1
+9,10,-1
+18,"networkServiceInfo('192.168.1.112',samba,tcp,'443',someUser)","LEAF",1
+9,18,-1
+19,"vulExists('192.168.1.112','CVE-2007-2446',samba,remoteExploit,privEscalation)","LEAF",1
+9,19,-1
+8,9,-1
+20,"RULE 2 (remote exploit of a server program)","AND",0
+21,"netAccess('192.168.1.112',udp,'5353')","OR",0
+22,"RULE 5 (multi-hop access)","AND",0
+23,"hacl('10.15.10.11','192.168.1.112',udp,'5353')","LEAF",1
+22,23,-1
+22,1,-1
+21,22,-1
+24,"RULE 5 (multi-hop access)","AND",0
+25,"hacl('192.168.1.112','192.168.1.112',udp,'5353')","LEAF",1
+24,25,-1
+24,8,-1
+21,24,-1
+26,"RULE 6 (direct network access)","AND",0
+27,"hacl(internet,'192.168.1.112',udp,'5353')","LEAF",1
+26,27,-1
+26,17,-1
+21,26,-1
+20,21,-1
+28,"networkServiceInfo('192.168.1.112',samba,udp,'5353',someUser)","LEAF",1
+20,28,-1
+20,19,-1
+8,20,-1
+6,8,-1
+3,6,-1
+29,"RULE 6 (direct network access)","AND",0
+30,"hacl(internet,'10.15.10.11',tcp,'443')","LEAF",1
+29,30,-1
+29,17,-1
+3,29,-1
+2,3,-1
+31,"networkServiceInfo('10.15.10.11',outlook,tcp,'443',someUser)","LEAF",1
+2,31,-1
+32,"vulExists('10.15.10.11','CVE-1999-0519',outlook,remoteExploit,privEscalation)","LEAF",1
+2,32,-1
+1,2,-1
+33,"RULE 2 (remote exploit of a server program)","AND",0
+33,3,-1
+34,"networkServiceInfo('10.15.10.11',samba,tcp,'443',someUser)","LEAF",1
+33,34,-1
+35,"vulExists('10.15.10.11','CVE-2007-2446',samba,remoteExploit,privEscalation)","LEAF",1
+33,35,-1
+1,33,-1
+36,"RULE 2 (remote exploit of a server program)","AND",0
+37,"netAccess('10.15.10.11',udp,'5353')","OR",0
+38,"RULE 5 (multi-hop access)","AND",0
+39,"hacl('10.15.10.11','10.15.10.11',udp,'5353')","LEAF",1
+38,39,-1
+38,1,-1
+37,38,-1
+40,"RULE 5 (multi-hop access)","AND",0
+41,"hacl('192.168.1.112','10.15.10.11',udp,'5353')","LEAF",1
+40,41,-1
+40,8,-1
+37,40,-1
+42,"RULE 6 (direct network access)","AND",0
+43,"hacl(internet,'10.15.10.11',udp,'5353')","LEAF",1
+42,43,-1
+42,17,-1
+37,42,-1
+36,37,-1
+44,"networkServiceInfo('10.15.10.11',samba,udp,'5353',someUser)","LEAF",1
+36,44,-1
+36,35,-1
+1,36,-1

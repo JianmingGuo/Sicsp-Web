@@ -1,0 +1,60 @@
+[xsb_configuration loaded]
+[sysinitrc loaded]
+[xsbbrat loaded]
+
+XSB Version 3.8.0 (Three-Buck Chuck) of October 28, 2017
+[x86_64-unknown-linux-gnu 64 bits; mode: optimal; engine: slg-wam; scheduling: local]
+[Build date: 2020-05-14]
+
+| ?- [libmulval loaded]
+
+yes
+| ?- [auxiliary loaded]
+
+yes
+| ?- [vul_summary loaded]
+
+yes
+| ?- [/root/Sics-web/ToMulVAL/nessus/example-scan1_13/nessus.P dynamically loaded, cpu time used: 0.0030 seconds]
+
+yes
+| ?- 
+yes
+| ?- 
+yes
+| ?- 
+Host = _h174
+Program = _h192
+Protocol = _h210
+Port = _h228
+L = [networkServiceInfo(192.168.1.112,samba,udp,5353,someUser),networkServiceInfo(192.168.1.112,samba,udp,5353,someUser),networkServiceInfo(192.168.1.112,samba,tcp,443,someUser),networkServiceInfo(192.168.1.112,samba,tcp,443,someUser),networkServiceInfo(10.15.10.11,samba,udp,5353,someUser),networkServiceInfo(10.15.10.11,samba,udp,5353,someUser),networkServiceInfo(10.15.10.11,samba,tcp,443,someUser),networkServiceInfo(10.15.10.11,samba,tcp,443,someUser),networkServiceInfo(10.15.10.11,outlook,tcp,443,someUser),networkServiceInfo(10.15.10.11,outlook,tcp,443,someUser)]
+yes
+| ?- 
+Host = _h174
+Host1 = _h192
+Protocol = _h210
+Port = _h228
+L = [hacl(_h513,_h514,_h515,_h516)]
+yes
+| ?- 
+A = _h174
+B = _h192
+C = _h210
+L = [hasAccount(192.168.1.112_victim,192.168.1.112,user),hasAccount(10.15.10.14_victim,10.15.10.14,user),hasAccount(10.15.10.11_victim,10.15.10.11,user)]
+yes
+| ?- 
+A = _h174
+L = [inCompetent(192.168.1.112_victim),inCompetent(10.15.10.14_victim),inCompetent(10.15.10.11_victim)]
+yes
+| ?- 
+A = _h174
+L = [attackGoal(execCode(192.168.1.112,_h344)),attackGoal(execCode(10.15.10.14,_h351)),attackGoal(execCode(10.15.10.11,_h358))]
+yes
+| ?- 
+A = _h174
+L = [attackerLocated(internet),attackerLocated(internet),attackerLocated(internet)]
+yes
+| ?- 
+yes
+| ?- 
+End XSB (cputime 0.02 secs, elapsetime 0.02 secs)
