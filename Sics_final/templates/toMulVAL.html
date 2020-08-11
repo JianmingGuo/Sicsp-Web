@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+toMulVAL
+{% endblock %}
+{% block content %}
+<style>
+    html{text-align:center}
+</style>
+<embed lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>toMulVAL</title>
+
+</head>
+
+<body>
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+</body>
+
+<body> <!--style="background-image: url({% static '/imgs/S-ICS.png' %});background-size: auto 700px;background-position: 0px 0px;background-repeat:no-repeat;background-attachment:fixed;">-->
+    <h1 style="background: wheat;color: #67ace2;background-color: rgba(0,0,0,0.1);height: 130px;padding: 40px 0;margin:0 0 120px 0;">toMulVAL</h1>
+    <div id="ctrl-panal">
+        <p id="panal-p">
+            Please upload a origin file
+        </p>
+        <form class="panal-form" action="/ToMulVAL/tomulvalupload/" method="post" enctype="multipart/form-data">
+            <input id="file-button" type="file" name="upload"/>
+            <input class="radio-button" type="submit" value="ToMulVAL"/>
+        </form>
+        <form class="panal-form" style="margin: -33px;" action="/ToMulVAL/tomulvaldownload/" method="post">
+            <input class="radio-button" style="margin-left: 65%;" type="submit" value="Download the .p file">
+        </form>
+        <small id="panal-err-info" style="color: red">{{ errinf }}</small>
+    </div>
+
+    <style>
+        #ctrl-panal{
+            padding: 30px;
+            height: 250px;
+            width: 40%;
+            margin: 10px auto;
+            vertical-align: center;
+            background-color: rgba(0,0,0,0.05);
+        }
+        #panal-p{
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        #file-button{
+            text-align: center;
+            margin: 20px auto;
+            border: groove;
+
+        }
+        #panal-err-info{
+            margin-top: -80px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .panal-form{
+            height: 60px;
+            display: block;
+            width: 100%;
+        }
+        .radio-button{
+            margin: 20px;
+            padding: 10px;
+            display: block;
+            height: 40px;
+            width: 40%;
+            border-radius: 20px;
+        }
+    </style>
+
+    <!--<img src="/static/imgs/IMG_2175.jpeg"/>-->
+    <script src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+    <script src="/static/js/jquery.min.js"></script>
+</body>
+
+
+<body onload="setToEditable('editable')">
+    <link rel="stylesheet" type="text/css" href="/static/css/editable.css"
+    <script src="/static/js/jquery.min.js"></script>
+
+	<script language="javascript" src="/static/js/editable.js"  type="text/javascript"></script>
+
+
+	<script type="text/javascript">
+		function setToEditable(tableid){
+			document.getElementById(tableid).onclick=editCell;
+		}
+	</script>
+    <input type="text" id="tpname"/>
+    <button type="button" id="upname" onclick="Gettopo('tpname')">提交</button>
+	<div style="height:40px;"></div>
+	<center>
+	<table border="1" id="editable" class="stats">
+		<tr bgcolor="#8da1b1">
+			<th nowrap="nowrap">IP</th>
+			<th nowrap="nowrap">主机名</th>
+			<th nowrap="nowrap">网络/文件服务器</th>
+			<th nowrap="nowrap">读关系</th>
+			<th nowrap="nowrap">写关系</th>
+			<th nowrap="nowrap">设备型号</th>
+		</tr>
+	</table>
+
+    <style>
+        th{
+            text-align: center;
+        }
+    </style>
+
+    <div style="height:40px;"></div>
+    <div style="width: 40%">
+        <button type="button" class="radio-button" id="upload" onclick="update('editable')">Submit</button>
+        <!-- <button type="button" class="radio-button" id="mulval" onclick="mulval('editable')">生成攻击图</button> -->
+        <br>
+        <form class="panal-form" style="margin: -33px;" action="/ToMulVAL/tomulvaldownload1/" method="post">
+            <input class="radio-button"  type="submit" value="Download the .p file">
+        </form>
+    </div>
+	</center>
+<script>
+function Gettopo(name) {
+    var len = document.getElementById("editable").rows.length;
+    for (i = 0; i < len-1; i++) {
+       $('table tr').eq(1).remove();
+     }
+     
+    var formdata = new FormData();
+    var tpname = document.getElementById(name).value;
+    formdata.append("topo",tpname);
+    $.ajax({
+        url: "/GetData",
+        type: "post",
+        data: formdata,
+        contentType: false,
+        processData: false,
+        success: function (data) {
+            var length = Object.keys(data).length;
+            var i = 1;
+            for (var key in data) {
+                insRow("editable", i, key, data);
+                i++;
+            }
+        },
+        error: function (data) {
+            alert("拉取信息失败！");
+            console.log(data)
+        }
+    })
+}
+</script>
+</body>
+{% endblock %}

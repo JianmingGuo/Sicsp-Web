@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Asset-List
+{% endblock %}
+{% block content %}
+
+<style>
+    html{text-align:center}
+</style>
+<embed lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asset-List</title>
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+</head>
+
+
+<body>
+    <h1 style="background: wheat;color: #67ace2;background-color: rgba(0,0,0,0.1);height: 130px;padding: 40px 0;margin:0 0 120px 0;">Asset List</h1>
+    <div id="ctrl-panal">
+        <p id="panal-p">Please select the target network</p>
+        <br>
+        <input type="text" id="tpname"/>
+        <button type="button" class="radio-button" style="margin-left:41%;" id="upname" onclick="GetList('tpname')">Submit</button>
+        <br>
+        <br>
+        <br>
+
+    </div>
+
+<table id="demoTreeTb"></table>
+<br>
+<br>
+<div>
+    <!-- <button type="button" class="radio-button" id="upload" onclick="update('editable')">提交</button> -->
+    <!-- <button type="button" class="radio-button" id="mulval" onclick="mulval('editable')">生成攻击图</button> -->
+    <button type="button" class="radio-button" style="margin-left: 41%;" id="mulval" onclick="genmulval()">Generate .P file</button>
+    <!-- <br> -->
+    <form class="panal-form" action="/ToMulVAL/tomulvaldownload1/" method="post">
+        <input class="radio-button" style="margin-left: 41%;" type="submit" value="Download the .p file">
+    </form>
+</div>
+
+<style>
+    #ctrl-panal{
+        padding: 30px;
+        height: 200px;
+        width: 40%;
+        margin: 10px auto;
+        vertical-align: center;
+        background-color: rgba(0,0,0,0.05);
+    }
+    #panal-p{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    #file-button{
+        text-align: center;
+        margin: 20px auto;
+        border: groove;
+
+    }
+    #panal-err-info{
+        margin-top: -80px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .panal-form{
+        height: 60px;
+        display: block;
+        width: 100%;
+    }
+    .radio-button{
+        margin: 20px;
+        padding: 10px;
+        display: block;
+        height: 40px;
+        width: 20%;
+        border-radius: 20px;
+    }
+</style>
+
+<script src= "/static/layui/layui.js"></script>
+<script src="/static/module/jquery.min.js"></script>
+<script>
+function GetList(name) {
+    layui.config({
+        base: "../static/module/"  // 配置模块所在的目录
+    }).use(['table', 'layer', 'util', 'treeTable'], function () {
+        var $ = layui.jquery;
+        var layer = layui.layer;
+        var util = layui.util;
+        var treeTable = layui.treeTable;
+        var table = layui.table;
+
+        var table_data;
+        var formdata = new FormData();
+        var tpname = document.getElementById(name).value;
+        formdata.append("topo", tpname);
+        $.ajax({
+            url: "/GetList",
+            type: "post",
+            data: formdata,
+            async:false,
+            contentType: false,
+            processData: false,
+            success: function (data) {
+                table_data = JSON.parse(data['list']);
+            },
+            error: function (data) {
+                alert("拉取清单失败！");
+                console.log(data)
+            }
+        });
+
+        var test = table_data;
+        // 渲染表格
+        var renderTable = function () {
+            treeTable.render({
+                size: 'lg', //尺寸
+                treeColIndex: 0, //设置下拉箭头在第几列
+                treeSpid: "0",   //最上级的父级id
+                treeIdName: 'deptId', //id字段的名称(自己的id)
+                treePidName: 'parentId', //pid字段的名称（父亲的id）
+                treeDefaultClose: true, //是否默认折叠
+                treeLinkage: false, //父级展开时是否自动展开所有子级
+                elem: '#demoTreeTb', //表格的id
+                data: table_data,  // 数据
+                tree: {
+                    iconIndex: 0,    // 折叠图标显示在第几列
+                    isPidData: true  // 是否是pid形式数据
+                },
+                page: false,
+                cols: [   //列数和列名可根据需要更改
+                    [
+                        {field: 'ip', width: "30%", align: 'left', title: '子网/IP地址'},
+                        {field: 'name', align: "center", title: '主机名'},
+                        {field: 'mac', align: 'center', title: 'MAC'},
+                        {field: 'mod', align: 'center', title: '设备型号'},
+                        {field: 'cve', align: 'center', title: 'CVE-ID'},
+                        {field: 'manu', align: 'center', title: '厂商'},
+                        {field: 'attr', align: 'center', title: '属性'},
+                        {field: 'wr', align: 'center', title: '读关系'},
+                        {field: 'rr', align: 'center', title: '写关系'},
+                    ]
+                ]
+
+            });
+        };
+        renderTable();
+    });
+}
+function genmulval() {
+    $.ajax({
+        url: "/GenMulval",
+        type: "post",
+        data: "hello",
+        contentType: false,
+        processData: false,
+        success: function (data) {
+            alert("点P文件生成成功！")
+        },
+        error: function (data) {
+            alert("点P文件生成失败！");
+            console.log(data)
+        }
+    })
+}
+
+</script> 
+
+<script src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+<script src="/static/js/jquery.min.js"></script>
+
+</body>
+
+{% endblock %}

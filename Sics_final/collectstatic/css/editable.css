@@ -1,0 +1,30 @@
+input.editable{
+	background:#CCC;
+	border:1px solid red;
+	margin:0;
+	padding:1px 3px;
+	vertical-align:middle;
+}
+
+table.stats
+{
+	text-align: center;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif,"华文中宋";
+	font-weight: normal;
+	font-size: 13px;
+	color: #fff;
+	width: 692px;
+	background-color: #666;
+	border: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+table.stats td
+{
+	background-color: #cfdbea;
+	color: #000;
+	padding: 4px;
+	text-align: center;
+	border: 1px #fff solid;
+}

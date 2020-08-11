@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Grass_topology
+{% endblock %}
+{% block content %}
+<style>
+    html{text-align:center}
+</style>
+<embed lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grass_topology</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+</body>
+
+<body> <!--style="background-image: url({% static '/imgs/S-ICS.png' %});background-size: auto 700px;background-position: 0px 0px;background-repeat:no-repeat;background-attachment:fixed;">-->
+    <h1 style="background: wheat;color: #67ace2;background-color: rgba(0,0,0,0.1);height: 130px;padding: 40px 0;margin:0 0 120px 0;">Grass_topology</h1>
+
+    <h3>Search <a href="/blog/home/?searchtext=Grass">"Grass_topology"</a> for usage.</h3><br>
+
+    <div>
+        <!-- <form action="https://pan.baidu.com/s/1pxKJbjGnw7OSf7u0c6wVjQ">
+            <button class="cbutton" type="submit" href="https://pan.baidu.com/s/1pxKJbjGnw7OSf7u0c6wVjQ">下载Grass_topology</button>
+        </form> -->
+        <form class="panal-form"  action="/grass/download" method="post">
+            <button class="cbutton"  type="submit" >下载Grass_topology</button>
+        </form>
+        <br>
+
+        <form action="grass://">
+            <button class="cbutton" type="submit" href="grass://">运行Grass_topology</button>
+        </form>
+
+        
+
+    </div>
+
+    <style>
+        .cbutton{
+            margin: 25px auto;
+            padding: 10px;
+            width: 300px;
+            border-radius: 30px;
+            text-align: center;
+
+        }
+    </style>
+
+    <!--<img src="/static/imgs/IMG_2175.jpeg"/>-->
+    <script src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</body>
+
+{% endblock %}

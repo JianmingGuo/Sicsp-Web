@@ -1,0 +1,61 @@
+vulProperty('CVE-2007-2446',remoteExploit,privEscalation).
+
+vulProperty('CVE-2007-2446',remoteExploit,privEscalation).
+
+vulProperty('CVE-2007-2446',remoteExploit,privEscalation).
+
+vulProperty('CVE-2007-2446',remoteExploit,privEscalation).
+
+vulProperty('CVE-1999-0519',remoteExploit,privEscalation).
+
+vulProperty('CVE-1999-0519',remoteExploit,privEscalation).
+
+vulExists('10.15.10.14','CVE-1999-0524','hp-ux').
+
+vulExists('192.168.1.112','CVE-2007-2446',samba).
+
+vulExists('10.15.10.11','CVE-2007-2446',samba).
+
+vulExists('10.15.10.11','CVE-1999-0519',outlook).
+
+cvss('CVE-1999-0524',l).
+
+cvss('CVE-2007-2446',l).
+
+cvss('CVE-2007-2446',l).
+
+cvss('CVE-1999-0519',l).
+
+networkServiceInfo('192.168.1.112',samba,udp,'5353',someUser).
+
+networkServiceInfo('192.168.1.112',samba,udp,'5353',someUser).
+
+networkServiceInfo('192.168.1.112',samba,tcp,'443',someUser).
+
+networkServiceInfo('192.168.1.112',samba,tcp,'443',someUser).
+
+networkServiceInfo('10.15.10.11',samba,udp,'5353',someUser).
+
+networkServiceInfo('10.15.10.11',samba,udp,'5353',someUser).
+
+networkServiceInfo('10.15.10.11',samba,tcp,'443',someUser).
+
+networkServiceInfo('10.15.10.11',samba,tcp,'443',someUser).
+
+networkServiceInfo('10.15.10.11',outlook,tcp,'443',someUser).
+
+networkServiceInfo('10.15.10.11',outlook,tcp,'443',someUser).
+
+inCompetent('192.168.1.112_victim').
+hasAccount('192.168.1.112_victim', '192.168.1.112', user).
+attackerLocated(internet).
+attackGoal(execCode('192.168.1.112', _)).
+inCompetent('10.15.10.14_victim').
+hasAccount('10.15.10.14_victim', '10.15.10.14', user).
+attackerLocated(internet).
+attackGoal(execCode('10.15.10.14', _)).
+inCompetent('10.15.10.11_victim').
+hasAccount('10.15.10.11_victim', '10.15.10.11', user).
+attackerLocated(internet).
+attackGoal(execCode('10.15.10.11', _)).
+hacl(_,_,_,_).

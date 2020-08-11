@@ -1,0 +1,96 @@
+1,"execCode(workStation,root)","OR",0
+2,"RULE 4 (Trojan horse installation)","AND",0
+3,"accessFile(workStation,write,'/usr/local/share')","OR",0
+4,"RULE 16 (NFS semantics)","AND",0
+5,"accessFile(fileServer,write,'/export')","OR",0
+6,"RULE 10 (execCode implies file access)","AND",0
+7,"canAccessFile(fileServer,root,write,'/export')","LEAF",1
+6,7,-1
+8,"execCode(fileServer,root)","OR",0
+9,"RULE 2 (remote exploit of a server program)","AND",0
+10,"netAccess(fileServer,rpc,100005)","OR",0
+11,"RULE 5 (multi-hop access)","AND",0
+12,"hacl(fileServer,fileServer,rpc,100005)","LEAF",1
+11,12,-1
+11,8,-1
+10,11,-1
+13,"RULE 5 (multi-hop access)","AND",0
+14,"hacl(webServer,fileServer,rpc,100005)","LEAF",1
+13,14,-1
+15,"execCode(webServer,apache)","OR",0
+16,"RULE 2 (remote exploit of a server program)","AND",0
+17,"netAccess(webServer,tcp,80)","OR",0
+18,"RULE 5 (multi-hop access)","AND",0
+19,"hacl(fileServer,webServer,tcp,80)","LEAF",1
+18,19,-1
+18,8,-1
+17,18,-1
+20,"RULE 5 (multi-hop access)","AND",0
+21,"hacl(webServer,webServer,tcp,80)","LEAF",1
+20,21,-1
+20,15,-1
+17,20,-1
+22,"RULE 5 (multi-hop access)","AND",0
+23,"hacl(workStation,webServer,tcp,80)","LEAF",1
+22,23,-1
+22,1,-1
+17,22,-1
+24,"RULE 6 (direct network access)","AND",0
+25,"hacl(internet,webServer,tcp,80)","LEAF",1
+24,25,-1
+26,"attackerLocated(internet)","LEAF",1
+24,26,-1
+17,24,-1
+16,17,-1
+27,"networkServiceInfo(webServer,httpd,tcp,80,apache)","LEAF",1
+16,27,-1
+28,"vulExists(webServer,'CVE-2002-0392',httpd,remoteExploit,privEscalation)","LEAF",1
+16,28,-1
+15,16,-1
+13,15,-1
+10,13,-1
+29,"RULE 5 (multi-hop access)","AND",0
+30,"hacl(workStation,fileServer,rpc,100005)","LEAF",1
+29,30,-1
+29,1,-1
+10,29,-1
+9,10,-1
+31,"networkServiceInfo(fileServer,mountd,rpc,100005,root)","LEAF",1
+9,31,-1
+32,"vulExists(fileServer,vulID,mountd,remoteExploit,privEscalation)","LEAF",1
+9,32,-1
+8,9,-1
+33,"RULE 4 (Trojan horse installation)","AND",0
+33,5,-1
+8,33,-1
+34,"RULE 4 (Trojan horse installation)","AND",0
+35,"accessFile(fileServer,write,_)","OR",0
+36,"RULE 10 (execCode implies file access)","AND",0
+37,"canAccessFile(fileServer,root,write,_)","LEAF",1
+36,37,-1
+36,8,-1
+35,36,-1
+34,35,-1
+8,34,-1
+6,8,-1
+5,6,-1
+38,"RULE 17 (NFS shell)","AND",0
+39,"hacl(webServer,fileServer,nfsProtocol,nfsPort)","LEAF",1
+38,39,-1
+40,"nfsExportInfo(fileServer,'/export',write,webServer)","LEAF",1
+38,40,-1
+38,15,-1
+5,38,-1
+41,"RULE 17 (NFS shell)","AND",0
+42,"hacl(workStation,fileServer,nfsProtocol,nfsPort)","LEAF",1
+41,42,-1
+43,"nfsExportInfo(fileServer,'/export',write,workStation)","LEAF",1
+41,43,-1
+41,1,-1
+5,41,-1
+4,5,-1
+44,"nfsMounted(workStation,'/usr/local/share',fileServer,'/export',read)","LEAF",1
+4,44,-1
+3,4,-1
+2,3,-1
+1,2,-1

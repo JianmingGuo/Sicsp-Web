@@ -1,0 +1,49 @@
+[xsb_configuration loaded]
+[sysinitrc loaded]
+[xsbbrat loaded]
+
+XSB Version 3.8.0 (Three-Buck Chuck) of October 28, 2017
+[x86_64-unknown-linux-gnu 64 bits; mode: optimal; engine: slg-wam; scheduling: local]
+[Build date: 2020-05-14]
+
+| ?- [Compiling ./results]
+[results compiled, cpu time used: 0.0060 seconds]
+[results loaded]
+
+yes
+| ?- [libmulval loaded]
+
+yes
+| ?- [nessus_translator loaded]
+
+yes
+| ?- 
+yes
+| ?- 
+A = _h174
+B = _h192
+C = _h210
+L = [vulProperty(CVE-2007-2446,remoteExploit,privEscalation),vulProperty(CVE-2007-2446,remoteExploit,privEscalation),vulProperty(CVE-2007-2446,remoteExploit,privEscalation),vulProperty(CVE-2007-2446,remoteExploit,privEscalation),vulProperty(CVE-1999-0519,remoteExploit,privEscalation),vulProperty(CVE-1999-0519,remoteExploit,privEscalation)]
+yes
+| ?- 
+A = _h174
+B = _h192
+C = _h210
+L = [vulExists(10.15.10.14,CVE-1999-0524,hp-ux),vulExists(192.168.1.112,CVE-2007-2446,samba),vulExists(10.15.10.11,CVE-2007-2446,samba),vulExists(10.15.10.11,CVE-1999-0519,outlook)]
+yes
+| ?- 
+CVE = _h174
+AC = _h192
+L = [cvss(CVE-1999-0524,l),cvss(CVE-2007-2446,l),cvss(CVE-2007-2446,l),cvss(CVE-1999-0519,l)]
+yes
+| ?- 
+Host = _h174
+Program = _h192
+Protocol = _h210
+Port = _h228
+L = [networkServiceInfo(192.168.1.112,samba,udp,5353,someUser),networkServiceInfo(192.168.1.112,samba,udp,5353,someUser),networkServiceInfo(192.168.1.112,samba,tcp,443,someUser),networkServiceInfo(192.168.1.112,samba,tcp,443,someUser),networkServiceInfo(10.15.10.11,samba,udp,5353,someUser),networkServiceInfo(10.15.10.11,samba,udp,5353,someUser),networkServiceInfo(10.15.10.11,samba,tcp,443,someUser),networkServiceInfo(10.15.10.11,samba,tcp,443,someUser),networkServiceInfo(10.15.10.11,outlook,tcp,443,someUser),networkServiceInfo(10.15.10.11,outlook,tcp,443,someUser)]
+yes
+| ?- 
+yes
+| ?- 
+End XSB (cputime 0.02 secs, elapsetime 0.03 secs)

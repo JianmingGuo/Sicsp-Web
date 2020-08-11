@@ -1,0 +1,12 @@
+inCompetent('192.168.1.112_victim').
+hasAccount('192.168.1.112_victim', '192.168.1.112', user).
+attackerLocated(internet).
+attackGoal(execCode('192.168.1.112', _)).
+inCompetent('10.15.10.14_victim').
+hasAccount('10.15.10.14_victim', '10.15.10.14', user).
+attackerLocated(internet).
+attackGoal(execCode('10.15.10.14', _)).
+inCompetent('10.15.10.11_victim').
+hasAccount('10.15.10.11_victim', '10.15.10.11', user).
+attackerLocated(internet).
+attackGoal(execCode('10.15.10.11', _)).

@@ -1,0 +1,3 @@
+jdbc:mysql://39.100.88.210:3306/nvd
+mulval
+mulval

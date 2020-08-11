@@ -1,0 +1,111 @@
+primitive(inCompetent,1).
+primitive(competent,1).
+primitive(clientProgram,2).
+primitive(vulExists,3).
+primitive(vulProperty,3).
+primitive(hacl,4).
+primitive(attackerLocated,1).
+primitive(hasAccount,3).
+primitive(networkServiceInfo,5).
+primitive(setuidProgramInfo,3).
+primitive(nfsExportInfo,4).
+primitive(nfsMounted,5).
+primitive(localFileProtection,4).
+primitive(dependsOn,3).
+primitive(installed,2).
+primitive(bugHyp,4).
+primitive(vulExists,5).
+primitive(canAccessFile,4).
+primitive(isWebServer,1).
+derived(execCode,2).
+derived(netAccess,3).
+derived(canAccessHost,1).
+derived(accessFile,3).
+derived(accessMaliciousInput,3).
+derived(principalCompromised,1).
+derived(dos,1).
+derived(logInService,3).
+meta(cvss,2).
+meta(attackGoal,1).
+meta(advances,2).
+
+attack(execCode(workStation,root)).
+
+possible_duplicate_trace_step(because(6,rule_desc('direct network access',1.0),netAccess(webServer,tcp,80),[hacl(internet,webServer,tcp,80),attackerLocated(internet)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(webServer,apache),[netAccess(webServer,tcp,80),networkServiceInfo(webServer,httpd,tcp,80,apache),vulExists(webServer,'CVE-2002-0392',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(17,rule_desc('NFS shell',0.80000000000000004),accessFile(fileServer,write,'/export'),[hacl(webServer,fileServer,nfsProtocol,nfsPort),nfsExportInfo(fileServer,'/export',write,webServer),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(17,rule_desc('NFS shell',0.80000000000000004),accessFile(fileServer,write,'/export'),[hacl(webServer,fileServer,nfsProtocol,nfsPort),nfsExportInfo(fileServer,'/export',write,webServer),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(fileServer,rpc,100005),[hacl(webServer,fileServer,rpc,100005),advances(webServer,fileServer),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(17,rule_desc('NFS shell',0.80000000000000004),accessFile(fileServer,write,'/export'),[hacl(webServer,fileServer,nfsProtocol,nfsPort),nfsExportInfo(fileServer,'/export',write,webServer),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(webServer,tcp,80),[hacl(webServer,webServer,tcp,80),advances(webServer,webServer),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(webServer,tcp,80),[hacl(webServer,webServer,tcp,80),advances(webServer,webServer),execCode(webServer,apache)])).
+
+possible_duplicate_trace_step(because(16,rule_desc('NFS semantics',1),accessFile(workStation,write,'/usr/local/share'),[accessFile(fileServer,write,'/export'),nfsMounted(workStation,'/usr/local/share',fileServer,'/export',read)])).
+
+possible_duplicate_trace_step(because(4,rule_desc('Trojan horse installation',0.80000000000000004),execCode(fileServer,root),[accessFile(fileServer,write,'/export')])).
+
+possible_duplicate_trace_step(because(4,rule_desc('Trojan horse installation',0.80000000000000004),execCode(fileServer,root),[accessFile(fileServer,write,'/export')])).
+
+possible_duplicate_trace_step(because(4,rule_desc('Trojan horse installation',0.80000000000000004),execCode(workStation,root),[accessFile(workStation,write,'/usr/local/share')])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(webServer,apache),[netAccess(webServer,tcp,80),networkServiceInfo(webServer,httpd,tcp,80,apache),vulExists(webServer,'CVE-2002-0392',httpd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(fileServer,root),[netAccess(fileServer,rpc,100005),networkServiceInfo(fileServer,mountd,rpc,100005,root),vulExists(fileServer,vulID,mountd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(2,rule_desc('remote exploit of a server program',1.0),execCode(fileServer,root),[netAccess(fileServer,rpc,100005),networkServiceInfo(fileServer,mountd,rpc,100005,root),vulExists(fileServer,vulID,mountd,remoteExploit,privEscalation)])).
+
+possible_duplicate_trace_step(because(17,rule_desc('NFS shell',0.80000000000000004),accessFile(fileServer,write,'/export'),[hacl(workStation,fileServer,nfsProtocol,nfsPort),nfsExportInfo(fileServer,'/export',write,workStation),execCode(workStation,root)])).
+
+possible_duplicate_trace_step(because(17,rule_desc('NFS shell',0.80000000000000004),accessFile(fileServer,write,'/export'),[hacl(workStation,fileServer,nfsProtocol,nfsPort),nfsExportInfo(fileServer,'/export',write,workStation),execCode(workStation,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(fileServer,rpc,100005),[hacl(fileServer,fileServer,rpc,100005),advances(fileServer,fileServer),execCode(fileServer,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(fileServer,rpc,100005),[hacl(fileServer,fileServer,rpc,100005),advances(fileServer,fileServer),execCode(fileServer,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(fileServer,rpc,100005),[hacl(workStation,fileServer,rpc,100005),advances(workStation,fileServer),execCode(workStation,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(fileServer,rpc,100005),[hacl(fileServer,fileServer,rpc,100005),advances(fileServer,fileServer),execCode(fileServer,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(fileServer,rpc,100005),[hacl(fileServer,fileServer,rpc,100005),advances(fileServer,fileServer),execCode(fileServer,root)])).
+
+possible_duplicate_trace_step(because(17,rule_desc('NFS shell',0.80000000000000004),accessFile(fileServer,write,'/export'),[hacl(workStation,fileServer,nfsProtocol,nfsPort),nfsExportInfo(fileServer,'/export',write,workStation),execCode(workStation,root)])).
+
+possible_duplicate_trace_step(because(10,rule_desc('execCode implies file access',1.0),accessFile(fileServer,write,_h4577),[canAccessFile(fileServer,root,write,_h4577),execCode(fileServer,root)])).
+
+possible_duplicate_trace_step(because(10,rule_desc('execCode implies file access',1.0),accessFile(fileServer,write,_h4577),[canAccessFile(fileServer,root,write,_h4577),execCode(fileServer,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(webServer,tcp,80),[hacl(fileServer,webServer,tcp,80),advances(fileServer,webServer),execCode(fileServer,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(webServer,tcp,80),[hacl(workStation,webServer,tcp,80),advances(workStation,webServer),execCode(workStation,root)])).
+
+possible_duplicate_trace_step(because(5,rule_desc('multi-hop access',0.5),netAccess(webServer,tcp,80),[hacl(fileServer,webServer,tcp,80),advances(fileServer,webServer),execCode(fileServer,root)])).
+
+possible_duplicate_trace_step(because(10,rule_desc('execCode implies file access',1.0),accessFile(fileServer,write,'/export'),[canAccessFile(fileServer,root,write,'/export'),execCode(fileServer,root)])).
+
+possible_duplicate_trace_step(because(10,rule_desc('execCode implies file access',1.0),accessFile(fileServer,write,'/export'),[canAccessFile(fileServer,root,write,'/export'),execCode(fileServer,root)])).
+
+possible_duplicate_trace_step(because(10,rule_desc('execCode implies file access',1.0),accessFile(fileServer,write,_h4768),[canAccessFile(fileServer,root,write,_h4768),execCode(fileServer,root)])).
+
+possible_duplicate_trace_step(because(10,rule_desc('execCode implies file access',1.0),accessFile(fileServer,write,_h4768),[canAccessFile(fileServer,root,write,_h4768),execCode(fileServer,root)])).
+
+possible_duplicate_trace_step(because(16,rule_desc('NFS semantics',1),accessFile(workStation,write,'/usr/local/share'),[accessFile(fileServer,write,'/export'),nfsMounted(workStation,'/usr/local/share',fileServer,'/export',read)])).
+
+possible_duplicate_trace_step(because(4,rule_desc('Trojan horse installation',0.80000000000000004),execCode(fileServer,root),[accessFile(fileServer,write,_h4768)])).
+
+possible_duplicate_trace_step(because(4,rule_desc('Trojan horse installation',0.80000000000000004),execCode(fileServer,root),[accessFile(fileServer,write,_h4577)])).
+
+possible_duplicate_trace_step(because(16,rule_desc('NFS semantics',1),accessFile(workStation,write,'/usr/local/share'),[accessFile(fileServer,write,'/export'),nfsMounted(workStation,'/usr/local/share',fileServer,'/export',read)])).
+
+possible_duplicate_trace_step(because(16,rule_desc('NFS semantics',1),accessFile(workStation,write,'/usr/local/share'),[accessFile(fileServer,write,'/export'),nfsMounted(workStation,'/usr/local/share',fileServer,'/export',read)])).
+
+possible_duplicate_trace_step(because(4,rule_desc('Trojan horse installation',0.80000000000000004),execCode(workStation,root),[accessFile(workStation,write,'/usr/local/share')])).
+
+possible_duplicate_trace_step(because(4,rule_desc('Trojan horse installation',0.80000000000000004),execCode(workStation,root),[accessFile(workStation,write,'/usr/local/share')])).
+
